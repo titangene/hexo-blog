@@ -250,7 +250,7 @@ Flutter 預設會以 `adb` 工具基於的 Android SDK 版本來使用，若想�
 
 ![](flutter-install-on-windows/2018-10-23-07-14-00.png)
 
-3. 點選 **Browse repositories…**，接著搜尋 `Flutter` 並選擇並安裝名為 `Flutter` 的 plugin (請注意，`安裝Flutter` 外掛時會同時安裝 `Dart` 語言外掛)
+3. 點選 **Browse repositories…**，接著搜尋 `Flutter` 並選擇並安裝名為 `Flutter` 的 plugin (請注意，安裝 `Flutter` 外掛時會同時安裝 `Dart` 語言外掛)
 
 ![](flutter-install-on-windows/2018-10-23-07-14-06.png)
 

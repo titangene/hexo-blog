@@ -88,8 +88,10 @@ social:
   url: https://github.com/titangene
 - slug: facebook
   url: https://www.facebook.com/titangene.tw
+- slug: instagram
+  url: https://www.instagram.com/titangene/
 - slug: rss
-	url: /atom.xml
+  url: /atom.xml
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

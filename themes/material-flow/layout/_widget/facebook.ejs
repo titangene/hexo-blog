@@ -1,15 +1,20 @@
 <% if(config.facebook_fans.enable) { %>
-<section class="m_widget">
-    <div class="fb-page" 
-        data-href="<%= config.facebook_fans.url %>" 
-        data-tabs="timeline" 
-        data-width="250" 
-        data-small-header="false" 
-        data-adapt-container-width="true" 
-        data-hide-cover="false" 
+<section class="m_widget facebook_page">
+    <div class="fb-page"
+        data-href="<%= config.facebook_fans.url %>"
+        data-width="250"
+        data-small-header="false"
+        data-adapt-container-width="false"
+        data-hide-cover="false"
         data-show-facepile="true">
         <blockquote cite="<%= config.facebook_fans.url %>" class="fb-xfbml-parse-ignore">
-            <a href="<%= config.facebook_fans.url %>"><%= config.facebook_fans.name %></a>
+            <p>
+                <a href="<%= config.facebook_fans.url %>" class="social facebook" target="_blank">
+                    <span class="icon icon-facebook"></span>
+                </a>
+            </p>
+            <p><a href="<%= config.facebook_fans.url %>"><%= config.facebook_fans.name %></a></p>
+            <p>Loading...</p>
         </blockquote>
     </div>
 </section>

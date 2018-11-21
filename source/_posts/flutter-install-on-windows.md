@@ -9,7 +9,7 @@ categories:
   - Native App
 ---
 
-![](flutter-install-on-windows/flutter.jpg)
+![](/images/cover/flutter.jpg)
 
 最近剛接觸 Flutter，於是就把在 Windows 上建置環境的記錄寫成一篇筆記，裡面包括 Android Studio 和 VS Code 的開發流程。
 
@@ -29,7 +29,7 @@ categories:
 2. 解壓檔內有一個 `flutter` 資瞭夾，將此資料夾放在 Flutter SDK 所需的安裝目錄 (e.g `D:\dev\flutter`，請勿將 `flutter` 資瞭夾放在需要提高權限之類的目錄內，e.g. `C:\Program Files\` )。
 3. 將 `flutter\bin` 的完整目錄 (e.g. `D:\dev\flutter\bin` ) 加入 `Path` 環境變數 (各完整路徑記得用 `;` 分號分隔)
 
-![](flutter-install-on-windows/2018-10-23-07-09-08.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-09-08.png)
 
 4. 接著就可以在 Console 內執行 Flutter commands
 5. 執行 `flutter --version` 指令確定已成功安裝  Flutter SDK
@@ -176,7 +176,7 @@ Flutter 依賴於 Android Studio 以提供 Android 平台的依賴性。但也�
 1. 安裝 [Android Studio](https://developer.android.com/studio/)，請安裝 Recommended (建議) 版
 2. 執行 Android Studio，並瀏覽 `Android Studio Setup Wizard`，安裝最新的 Android SDK、Android SDK Platform-Tools、Android SDK Build-Tools，這些都是 Flutter 在開發 Android 時所必須的。
 
-![](flutter-install-on-windows/2018-10-23-07-10-14.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-10-14.png)
 
 3. 將 Android SDK 目錄設定為 `ANDROID_HOME` 環境變數 (預設目錄為 `C:\Users\Titan\AppData\Local\Android\sdk` )
 4. 定期更新 Android SDK (於 `Android Studio` > `Configure` > `SDK Manager` 安裝)
@@ -186,12 +186,12 @@ Flutter 依賴於 Android Studio 以提供 Android 平台的依賴性。但也�
 
 1. 裝置請開啟 `開發者模式` 內的 `USB 偵錯`，詳情可參考 [Configure on-device developer options  |  Android Developers](https://developer.android.com/studio/debug/dev-options) 此 Android 官方文件
 
-![](flutter-install-on-windows/2018-10-23-07-10-23.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-10-23.png)
 
 2. 安裝 [Google USB Driver](https://developer.android.com/studio/run/win-usb) (限 Windows)
 3. 使用 USB 線將裝置連接至電腦，如果你的裝置有出現提示，請授權你的電腦可訪問你的裝置
 
-![](flutter-install-on-windows/2018-10-23-07-10-36.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-10-36.png)
 
 4. 開啟終端機，執行 `flutter devices` 指令以驗證 Flutter 是否成功連結 Android 裝置
 
@@ -207,7 +207,7 @@ Flutter 預設會以 `adb` 工具基於的 Android SDK 版本來使用，若想�
 
 如果執行 `flutter run`指令，而且成功將 App 安置手機並執行，就會看到 App 的畫面
 
-![](flutter-install-on-windows/2018-10-23-07-10-45.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-10-45.png)
 
 ### 設定 Android 模擬器 (emulator)
 想在 Android 模擬器上執行和測試 Flutter App，請依照下面步驟：
@@ -215,21 +215,21 @@ Flutter 預設會以 `adb` 工具基於的 Android SDK 版本來使用，若想�
 1. 在主機上啟用 [VM acceleration](https://developer.android.com/studio/run/emulator-acceleration)
 2. 啟動 **Android Studio** > **Tools** > **AVD Manager** 並點選 **Create Virtual Device**
 
-![](flutter-install-on-windows/2018-10-23-07-10-55.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-10-55.png)
 
-![](flutter-install-on-windows/2018-10-23-07-11-05.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-11-05.png)
 
 1. 選擇設備定義，然後點擇 **Next**
 
-![](flutter-install-on-windows/2018-10-23-07-11-14.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-11-14.png)
 
 2. 選擇你所需的 Android 版本的 OS image，然後點選 **Next** (建議選擇 *x86* 或 x86_64 image)
 
-![](flutter-install-on-windows/2018-10-23-07-11-23.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-11-23.png)
 
 3. 在 Emulated Performance 欄位請選擇 **Hardware - GLES 2.0** 以啟用 [hardware acceleration](https://developer.android.com/studio/run/emulator-acceleration)
 
-![](flutter-install-on-windows/2018-10-23-07-11-38.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-11-38.png)
 
 4. 驗證 AVD 設定是否正確，若確定請點選 **Finish**
 5. 在 Android Virtual Device Manager 中，選擇某台模擬器並點擊 Run
@@ -248,52 +248,52 @@ Flutter 預設會以 `adb` 工具基於的 Android SDK 版本來使用，若想�
 1. 執行 Android Studio
 2. 開啟外掛選項 (**File** > **Settings** > **Plugins**)
 
-![](flutter-install-on-windows/2018-10-23-07-14-00.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-14-00.png)
 
 3. 點選 **Browse repositories…**，接著搜尋 `Flutter` 並選擇並安裝名為 `Flutter` 的 plugin (請注意，安裝 `Flutter` 外掛時會同時安裝 `Dart` 語言外掛)
 
-![](flutter-install-on-windows/2018-10-23-07-14-06.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-14-06.png)
 
-![](flutter-install-on-windows/2018-10-23-07-14-13.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-14-13.png)
 
 4. 點擊 **Restart Android Studio**
 
-![](flutter-install-on-windows/2018-10-23-07-14-20.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-14-20.png)
 
 ### 設定 VS Code
 - 安裝 Flutter plugin：
   - 安裝 [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter) 此擴充功能，並重啟 VS Code。
 
-![](flutter-install-on-windows/2018-10-23-07-14-30.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-14-30.png)
 
 - 使用 Flutter Doctor 驗證你的設定環境：
   - 按 `F1` 或 `ctrl + shift + p` 後，輸入 **Flutter** 並點選 **Flutter: Run Flutter Doctor** 即可至 **OUTPUT (輸出)** 查看驗證結果。
 
-![](flutter-install-on-windows/2018-10-23-07-14-39.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-14-39.png)
 
 # 入門
 ## Android Studio
 ### 建立新 app
 在 Android Studio 中建立 Flutter 專案 ( **File** > **New** > **New Flutter Project...** )
 
-![](flutter-install-on-windows/2018-10-23-07-15-04.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-15-04.png)
 
 接著選擇 **Flutter Application**，並點選 **Next**
 
-![](flutter-install-on-windows/2018-10-23-07-15-10.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-15-10.png)
 
 請設定專案名稱、確定 Flutter SDK 目錄、設定專案儲存位置與填寫專案的簡單描述後，點選 **Next**
 
-![](flutter-install-on-windows/2018-10-23-07-15-17.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-15-17.png)
 
 最後輸入公司網域 (e.g. example.com) 後，點選 **Finish** 即可建立新的 Flutter 專案
 
-![](flutter-install-on-windows/2018-10-23-07-15-23.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-15-23.png)
 
 ### 執行 app
 下圖為 Android Studio 的工具列：
 
-![](flutter-install-on-windows/2018-10-23-07-15-29.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-15-29.png)
 
 圖片來源：[Get Started: Test Drive | Flutter](https://flutter.io/get-started/test-drive/#androidstudio)
 
@@ -305,7 +305,7 @@ Flutter 預設會以 `adb` 工具基於的 Android SDK 版本來使用，若想�
     3. 將專案轉成 apk
     4. 將 apk 安裝並執行於裝置上
 
-![](flutter-install-on-windows/2018-10-23-07-15-41.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-15-41.png)
 
 ```shell
 Launching lib\main.dart on Android SDK built for x86 64 in debug mode...
@@ -337,35 +337,35 @@ D/EGL_emulation( 4777): eglMakeCurrent: 0x7073cf3b10a0: ver 2 0 (tinfo 0x7073c56
 ### 建立新 app
 1. 按 `F1` 或 `ctrl + shift + p` 後，輸入 **Flutter** 並點選 **Flutter: New Project**
 
-![](flutter-install-on-windows/2018-10-23-07-15-50.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-15-50.png)
 
 2. 輸入專案名稱後，按 `enter` 鍵
 
-![](flutter-install-on-windows/2018-10-23-07-15-56.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-15-56.png)
 
 3. 選擇專案目錄的儲存位置
 4. 等待專案建立完成，並在畫面顯示 `lib/main.dart` 檔案
 
-![](flutter-install-on-windows/2018-10-23-07-16-01.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-16-01.png)
 
 ### 執行 app
 1. 從 VS Code 底部的藍色狀態欄中點選 **Device Selector**
     - 若要使用實體裝置，詳情至 [設定你的 Android 裝置](#%E8%A8%AD%E5%AE%9A%E4%BD%A0%E7%9A%84-Android-%E8%A3%9D%E7%BD%AE) 參考。若連結成功會在 VS Code 底部的藍色狀態欄中看到你的裝置名稱
 
-      ![](flutter-install-on-windows/2018-10-23-07-16-14.png)
+      ![](/images/flutter-install-on-windows/2018-10-23-07-16-14.png)
 
     - 如果沒有可用的裝置，請點選 **No Devices** 並啟動模擬器
 
-      ![](flutter-install-on-windows/2018-10-23-07-16-34.png)
+      ![](/images/flutter-install-on-windows/2018-10-23-07-16-34.png)
 
-      ![](flutter-install-on-windows/2018-10-23-07-16-41.png)
+      ![](/images/flutter-install-on-windows/2018-10-23-07-16-41.png)
 2. 執行 **Debug**
 
-![](flutter-install-on-windows/2018-10-23-07-16-46.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-16-46.png)
 
 3. 等待 App 執行，可在偵錯主控台 (Debug Console) 看到執行進度，稍後就會在模擬器或裝置上看到下圖的 app 畫面
 
-![](flutter-install-on-windows/2018-10-23-07-16-52.png)
+![](/images/flutter-install-on-windows/2018-10-23-07-16-52.png)
 
 ## Terminal + editor
 ### 建立新 app

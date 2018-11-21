@@ -28,7 +28,7 @@ Git.io 有兩種建立短網址的方法，下面會分別介紹：
 
 但缺點是無法自訂短網址名稱，預設是自動隨機英文 + 數字的字串。
 
-![](github-url-shortener/github-url-shortener.png)
+![](/images/github-url-shortener/github-url-shortener.png)
 
 ## 使用 `curl` 指令建立短網址
 

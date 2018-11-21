@@ -13,7 +13,12 @@
 		<%- partial('categories',{post:post}) %>
   </section>
   <section class="article typo">
-	  <%- post.excerpt || post.content %>
+    <div itemprop="description">
+      <% if (!/<img src=.*/i.test(post.excerpt) && post.cover_image != null) { %>
+        <p><img src="<%= post.cover_image %>" alt="<%= post.title %>"></p>
+      <% } %>
+      <%- post.excerpt || post.content %>
+    <div>
 
     <% if (post.excerpt) { %>
 	  <div class="readmore">

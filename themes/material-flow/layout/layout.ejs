@@ -1,7 +1,13 @@
-<%- partial('_partial/head') %>
+<%
+  let cover_image = null;
+  if(page && page.cover_image){
+    cover_image = page.cover_image;
+  }
+%>
+<%- partial('_partial/head', { cover_image: cover_image }) %>
 <body>
   <%- partial('_partial/loading') %>
-  <script>setLoadingBarProgress(20)</script> 
+  <script>setLoadingBarProgress(20)</script>
   <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
     <script>setLoadingBarProgress(40);</script>
   <div class="l_body">

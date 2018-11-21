@@ -26,10 +26,11 @@
   <%- feed_tag(config.feed.path, {title: config.title}) %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%- open_graph({
+    image: cover_image,
     twitter_id: theme.twitter,
     google_plus: theme.google_plus, 
-    fb_admins: theme.fb_admins, 
-    fb_app_id: theme.fb_app_id}) %>
+    fb_admins: config.facebook_sdk.fb_admin, 
+    fb_app_id: config.facebook_sdk.fb_app_id}) %>
 
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">

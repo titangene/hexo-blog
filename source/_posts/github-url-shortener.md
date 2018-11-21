@@ -8,7 +8,10 @@ tags:
   - URL Shortener
 categories:
   - Other
+cover-image: /images/cover/github-url-shortener.png
 ---
+
+![](/images/cover/github-url-shortener.png)
 
 最近發現原來 Github 也有提供縮網址 (URL Shortener) 服務「[Git.io](https://git.io/)」，它只適用於 `gist.github.com` 及 `github.com` 兩個 hostname。
 

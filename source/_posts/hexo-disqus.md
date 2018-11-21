@@ -5,8 +5,11 @@ author: Titangene
 tags:
   - Hexo
 categories:
-  - Hexo
+  - Blog
+cover-image: /images/cover/hexo-disqus.png
 ---
+
+![](/images/cover/hexo-disqus.png)
 
 接續從零建置 Github Page + Hexo blog，這次來研究如何在 Hexo 加入 Disqus 討論區。
 

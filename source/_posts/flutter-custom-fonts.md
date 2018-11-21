@@ -7,6 +7,7 @@ tags:
   - Dart
 categories:
   - Native App
+cover_image: /images/cover/flutter.jpg
 ---
 
 ![](/images/cover/flutter.jpg)

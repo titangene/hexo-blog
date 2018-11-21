@@ -9,7 +9,10 @@ tags:
 categories:
   - Windows
   - Linux
+cover-image: /images/cover/windows-subsystem-for-linux.png
 ---
+
+![](/images/cover/windows-subsystem-for-linux.png)
 
 Windows Subsystem for Linux (簡稱 WSL)，由 Microsoft 與 Canonical 公司合作開發，可直接在 Windows 10 中建立一個 Linux 子系統，原生執行 Linux，還可自行選擇你想安裝的 Linux 發行版，例如：Ubuntu、Kali Linux、SUSE。那下面就來介紹如何安裝和使用。
 

@@ -9,6 +9,7 @@ tags:
   - Package Management
 categories:
   - Python
+cover_image: /images/cover/python_anaconda.png
 ---
 
 ![](/images/cover/python_anaconda.png)

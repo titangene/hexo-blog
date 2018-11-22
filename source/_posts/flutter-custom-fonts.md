@@ -10,7 +10,7 @@ categories:
 cover_image: /images/cover/flutter.jpg
 ---
 
-![](/images/cover/flutter.jpg)
+![](../images/cover/flutter.jpg)
 
 雖然 Android 和 iOS 內建都有字型，但常有自訂字型的需求，所以這篇會教你如何在 Flutter 使用自訂字型。
 
@@ -51,7 +51,7 @@ flutter:
 
 ## 設定預設字型
 
-![](/images/flutter-custom-fonts/flutter_set-default-font.png)
+![](../images/flutter-custom-fonts/flutter_set-default-font.png)
 
 ```dart
 MaterialApp(
@@ -63,7 +63,7 @@ MaterialApp(
 
 ## 在特定 Widget 設定字型
 
-![](/images/flutter-custom-fonts/flutter_set-the-font-on-a-specific-widget.png)
+![](../images/flutter-custom-fonts/flutter_set-the-font-on-a-specific-widget.png)
 
 ```dart
 Text(
@@ -79,7 +79,7 @@ Text(
 
 ## 完整範例程式碼
 
-![](/images/flutter-custom-fonts/flutter_custom-fonts_demo.png)
+![](../images/flutter-custom-fonts/flutter_custom-fonts_demo.png)
 
 ```dart
 import 'package:flutter/material.dart';

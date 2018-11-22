@@ -12,7 +12,7 @@ categories:
 cover_image: /images/cover/python_anaconda.png
 ---
 
-![](/images/cover/python_anaconda.png)
+![](../images/cover/python_anaconda.png)
 
 學習如何利用 Conda 來建立不同需求所需的 Python 開發環境，並如何管理相依套件。
 
@@ -20,13 +20,13 @@ cover_image: /images/cover/python_anaconda.png
 
 ## Anaconda
 
-![](/images/create-a-virtual-environment-and-manage-dependencies-with-conda/anaconda-logo.png)
+![](../images/create-a-virtual-environment-and-manage-dependencies-with-conda/anaconda-logo.png)
 
 Anaconda 是最受歡迎的 Python 資料科學 (Data Science) 平台，它特點就是本來就包含了各種數據分析、科學計算的相關套件 (例如：NumPy、SciPy、Matplotlib、SymPy、Pandas ... 等)，而 Anaconda 的套件管理工具就是 conda。
 
 ## Conda
 
-![](/images/create-a-virtual-environment-and-manage-dependencies-with-conda/conda-logo.png)
+![](../images/create-a-virtual-environment-and-manage-dependencies-with-conda/conda-logo.png)
 
 Conda 是一個開源的套件與環境管理的系統，可以在 Windows、macOS 和 Linux 上使用。可利用 Conda 來安裝、執行、更新套件以及其相依的套件，並且還可用來建立不同的開發環境 (例如：不同環境有不同的 Python 版本)。
 

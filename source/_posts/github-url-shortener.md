@@ -11,7 +11,7 @@ categories:
 cover-image: /images/cover/github-url-shortener.png
 ---
 
-![](/images/cover/github-url-shortener.png)
+![](../images/cover/github-url-shortener.png)
 
 最近發現原來 Github 也有提供縮網址 (URL Shortener) 服務「[Git.io](https://git.io/)」，它只適用於 `gist.github.com` 及 `github.com` 兩個 hostname。
 
@@ -31,7 +31,7 @@ Git.io 有兩種建立短網址的方法，下面會分別介紹：
 
 但缺點是無法自訂短網址名稱，預設是自動隨機英文 + 數字的字串。
 
-![](/images/github-url-shortener/github-url-shortener.png)
+![](../images/github-url-shortener/github-url-shortener.png)
 
 ## 使用 `curl` 指令建立短網址
 

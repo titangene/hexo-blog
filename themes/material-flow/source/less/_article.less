@@ -46,10 +46,13 @@
     ol {
         list-style: initial;
         padding-left: 20px;
-        & > li{
-          list-style: initial;
-        }
         margin: 20px 0px;
+        & > li{
+            list-style: initial;
+            & > ul, ol {
+                margin: 4px 0px;
+            }
+        }
     }
     ol {
         & > li {

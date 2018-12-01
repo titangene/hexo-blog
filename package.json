@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "hexo server --config _config.yml,_config.local.yml",
-    "preview": "hexo server --config _config.yml,_config.release.yml"
+    "serve-dev": "hexo server --config _config.yml,_config.local.yml",
+    "serve-prod": "hexo server --config _config.yml,_config.release.yml",
+    "hexo-g": "hexo generate --config _config.yml,_config.release.yml"
   },
   "hexo": {
     "version": "3.8.0"

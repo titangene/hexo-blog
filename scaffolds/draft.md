@@ -4,5 +4,5 @@ author: {{ author }}
 date: {{ date }}
 tags:
 categories:
-featured_image:
+cover_image:
 ---

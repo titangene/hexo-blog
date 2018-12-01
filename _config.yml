@@ -151,6 +151,12 @@ js_minifier:
   exclude:
   - '*.min.js'
 
+js_concator:
+  enable: false
+  bundle_path: '/js/bundle.js'
+  front: false
+  silent: false
+
 image_minifier:
   enable: false
   interlaced: true

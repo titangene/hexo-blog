@@ -16,5 +16,8 @@ css_minifier:
 js_minifier:
   enable: true
 
+js_concator:
+  enable: true
+
 image_minifier:
   enable: true

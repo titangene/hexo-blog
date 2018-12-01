@@ -3,6 +3,7 @@ title: 用 Conda 建立虛擬環境和管理相依套件
 date: 2018-11-19 17:10:00
 author: Titangene
 tags:
+  - Python
   - Anaconda
   - Conda
   - Virtual Environment

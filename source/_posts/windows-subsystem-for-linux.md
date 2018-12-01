@@ -3,9 +3,10 @@ title: Windows Subsystem for Linux (WSL)
 date: 2018-11-17 19:00:45
 author: Titangene
 tags:
-  - WSL
+  - Linux
   - Ubuntu
   - Windows 10
+  - WSL
 categories:
   - Windows
   - Linux

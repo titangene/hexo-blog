@@ -5,6 +5,8 @@ author: Titangene
 tags:
   - Flutter
   - Dart
+  - Native App
+  - Font
 categories:
   - Native App
 cover_image: /images/cover/flutter.jpg

@@ -4,6 +4,7 @@ date: 2018-10-22 22:40:00
 author: Titangene
 tags:
   - Hexo
+  - Blog
 categories:
   - Blog
 cover-image: /images/cover/hexo-disqus.png

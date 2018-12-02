@@ -8,6 +8,8 @@
 	line-height: @header-height;
 	height: @header-height;
 	overflow: hidden;
+	background: @primary-color;
+	padding: 0 @gap / 2;
 	.wrapper{
 		transition: transform .2s ease-out;
 	}
@@ -17,15 +19,13 @@
 	.nav--main,.nav-sub{
 		height: @header-height;
 	}
-	background: @primary-color;
-	padding: 0 @gap;
 	&, a{
 		color: @white;
 	}
 	&:extend(.z-depth-1);
 	.logo {
 		flex: none;
-		padding: 0 @gap;
+		padding: 0 @gap / 2;
 		font-size: @header-logo-font-size;
 	}
 	.menu{
@@ -60,7 +60,7 @@
 		display: none;
 		font-size: @header-switcher-font-size;
 		& > li{
-			margin-left: @gap;
+			margin: 0 @gap / 2;
 			.enable-trans();
 			svg{
 				margin-top:16px;

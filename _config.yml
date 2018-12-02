@@ -111,6 +111,11 @@ facebook_sdk:
   like_button: true
   webmaster: true
 
+# Google Plugins
+google_analytics:
+  enable: true
+  # tracking_id:
+
 # Facebook Fans Page
 facebook_fans:
   enable: true

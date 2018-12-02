@@ -1,10 +1,11 @@
 # Google Plugins
-google_analytics: <GOOGLE_ANALYTICS_ID>
+google_analytics:
+  tracking_id: <GOOGLE_ANALYTICS_TRACKING_ID>
 
 # Facebook SDK Support
 facebook_sdk:
-  app_id: <FBSDK_APP_ID>
-  fb_admin: <FBSDK_ADMIN_ID>
+  app_id: <FB_SDK_APP_ID>
+  fb_admin: <FB_SDK_ADMIN_ID>
 
 ## hexo-all-minifier
 html_minifier:

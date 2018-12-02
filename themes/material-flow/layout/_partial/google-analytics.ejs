@@ -1,0 +1,12 @@
+<% if(config.google_analytics.enable) { %>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129758206-1"></script>
+<script>
+  !(function(window) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '<%= config.google_analytics.tracking_id %>');
+  })(window);
+</script>
+<%} %>

@@ -24,10 +24,10 @@
      ul.entry > li > a{
         padding: 0 @gap;
         line-height:@item-height;
-        height: @item-height; 
+        height: @item-height;
         display: flex;
         justify-content: space-between;
-        align-content: center; 
+        align-content: center;
         .name{
             flex:auto;
             &:extend(.txt-ellipsis);
@@ -43,18 +43,34 @@
     }
 }
 .m_widget.about{
-    .waves-effect,img{
-        width: 100%;
+    padding-top: 20px;
+    img.avatar {
+        max-width: 120px;
         display: block;
+        margin: 8px auto;
+        max-width: 120px;
+        height: auto;
+        border-radius: 50%;
+        -webkit-transition: -webkit-box-shadow 0.3s ease;
+        transition: box-shadow 0.3s ease;
+        -webkit-box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.06);
+        box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.06);
+        &:hover {
+            -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
+        }
     }
-    @media(max-width: @on-phone){
-        display:none;
+    // @media(max-width: @on-phone){
+    //     display:none;
+    // }
+    .header {
+        text-align: center;
     }
     .content{
         padding:0;
         .desc{
             position: relative;
-            padding: @gap;
+            padding: 10px @gap;
             background:@qoute-background-color;
             .enable-trans(.15s);
             line-height: 1.2em;
@@ -64,7 +80,7 @@
                 position: absolute;
                 left:0;
                 top:0;
-                width:2px;
+                width:3px;
                 height:100%;
                 background:@accent-color;
             }

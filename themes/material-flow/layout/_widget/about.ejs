@@ -1,10 +1,18 @@
-<section class='m_widget about'>
-  <% if(config.avatar) { %>
-  <img class='avatar' src='<%= url_for(config.avatar) %>' />
-  <%} %>
-  <div class='header'><%=config.author %></div>
-  <div class='content'>
-      <div class='desc'><%=config.description %></div>
+<section class="m_widget about">
+  <div class="avatar-section">
+    <% if(config.avatar) { %>
+    <style>
+    .avatar-cover {
+        background: url(<%= url_for(theme.avatar_cover) %>) 0% 0% / cover no-repeat;
+    }
+    </style>
+    <div class="avatar-cover"></div>
+    <img class="avatar" src="<%= url_for(config.avatar) %>" />
+    <%} %>
+  </div>
+  <div class="header"><%=config.author %></div>
+  <div class="content">
+      <div class="desc"><%=config.description %></div>
   </div>
   <div class="content">
       <meta itemprop="url" content="<%= config.url %>">

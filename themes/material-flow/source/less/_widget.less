@@ -43,21 +43,31 @@
     }
 }
 .m_widget.about{
-    padding-top: 20px;
-    img.avatar {
-        max-width: 120px;
-        display: block;
-        margin: 8px auto;
-        max-width: 120px;
-        height: auto;
-        border-radius: 50%;
-        -webkit-transition: -webkit-box-shadow 0.3s ease;
-        transition: box-shadow 0.3s ease;
-        -webkit-box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.06);
-        box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.06);
-        &:hover {
-            -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
+    .avatar-section {
+        position: relative;
+        .avatar-cover {
+            height: 150px;
+            margin-bottom: 60px;
+        }
+        img.avatar {
+            max-width: 120px;
+            display: block;
+            margin: 8px auto;
+            max-width: 120px;
+            height: auto;
+            border-radius: 50%;
+            position: absolute;
+            top: 76px;
+            left: 0;
+            right: 0;
+            -webkit-transition: -webkit-box-shadow 0.3s ease;
+            transition: box-shadow 0.3s ease;
+            -webkit-box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.06);
+            box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.06);
+            &:hover {
+                -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
+            }
         }
     }
     // @media(max-width: @on-phone){

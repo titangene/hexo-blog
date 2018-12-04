@@ -1,3 +1,6 @@
+# custom
+avatar_cover: /images/avatar_cover.jpg
+
 # Search
 search:
   enable: true

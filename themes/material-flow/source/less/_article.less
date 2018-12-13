@@ -173,14 +173,26 @@
             }
         }
     }
-    table:not('.highlight table') {
+    table {
+        display: block;
         width: 100%;
+        overflow: auto;
+        word-break: normal;
+        word-break: keep-all;
         td,
         th {
-            padding: 12px 24px
+            padding: 4px 8px;
+            border: 1px solid #ddd;
+        }
+        th {
+            font-weight: bold
         }
         tr {
             border-bottom: 1px solid #ddd;
+            border-top: 1px solid #ccc;
+        }
+        tr:nth-child(2n) {
+            background-color: #f8f8f8;
         }
         &>thead>th {
             border-bottom-width: 2px;

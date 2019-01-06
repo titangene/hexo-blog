@@ -43,12 +43,11 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: false
-  # line_number: true
-  # auto_detect: false
-  # tab_replace: '  '
-
-highlightjs: true
+  enable: true
+  line_number: true
+  auto_detect: false
+  hljs: true
+  tab_replace:
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

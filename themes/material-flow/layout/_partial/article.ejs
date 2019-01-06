@@ -13,7 +13,7 @@
 	<%- partial('categories',{post:post}) %>
 	</section>
 	<% if(post.toc!==false){ %>
-		<section class="toc-wrapper"><%- toc(post.content) %></section>
+		<section class="toc-wrapper"><%- toc(post.content, {list_number: false}) %></section>
 	<% } %>
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
@@ -26,7 +26,7 @@
       <%})%>
 	  </div>
     <% } %>
-		
+
 	<% if(post.prev || post.next){ %>
 		<div class="art-item-footer">
 				<% if(post.prev){ %>

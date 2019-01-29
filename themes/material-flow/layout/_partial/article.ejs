@@ -23,6 +23,18 @@
   	</div>
 	  <% if (post.tags && post.tags.length) { %>
 	  <div class="article-tags tags">
+    <% if (post.comments && config.disqus.enable && config.disqus.count) { %>
+      <span class="comments-count">
+        <span class="post-meta-divider">|</span>
+        <span class="post-meta-item-icon">
+          <i class="fas fa-comment"></i>
+        </span>
+        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link" itemprop="discussionUrl">
+          <span class="disqus-comment-count"
+        data-disqus-identifier="<%= post.path %>" itemprop="commentCount"></span>
+        </a>
+      </span>
+    <% } %>
       <% post.tags.each(function(item){ %>
         <a href="<%- url_for(item.path) %>"><%=item.name %></a>
       <% }) %>

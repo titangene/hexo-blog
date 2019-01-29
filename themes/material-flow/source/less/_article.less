@@ -56,6 +56,54 @@
     dd {
         margin-left: 0;
     }
+    .task-list {
+        margin-left: 16px;
+    }
+    .task-list-item {
+        list-style-type: none;
+        input[type=checkbox] {
+            margin: 7px 0 3px -26px;
+            float: left;
+            position: relative;
+            top: -2px;
+            vertical-align: middle;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            &:before {
+                -webkit-transition: all 0.1s ease-in-out;
+                -moz-transition: all 0.1s ease-in-out;
+                transition: all 0.1s ease-in-out;
+                content: "";
+                position: absolute;
+                left: 0;
+                z-index: 1;
+                width: 12px;
+                height: 12px;
+                border: 2px solid #F44336;
+                background: #fff
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 12px;
+                height: 12px;
+                background: #fff;
+            }
+            &:checked::before {
+                -webkit-transform: rotate(-48deg);
+                -moz-transform: rotate(-48deg);
+                -ms-transform: rotate(-48deg);
+                -o-transform: rotate(-48deg);
+                transform: rotate(-48deg);
+                height: 7px;
+                top: 1px;
+                border-color: #00E676;
+                border-top-style: none;
+                border-right-style: none;
+            }
         }
     }
     a {

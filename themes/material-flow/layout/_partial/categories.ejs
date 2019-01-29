@@ -1,11 +1,17 @@
 <% if (post.categories && post.categories.length){ %>
-    <%
-    var cats = [];
-    post.categories.forEach(function(cat){
-        cats.push('<a href="'+url_for(cat.path)+'">' + cat.name + '</a>');
-    });
-    %>
-    <div class='cats'>
-        <%- cats.join(', ') %>
-    </div>
+  <%
+  var categories = [];
+  post.categories.forEach(function(cat){
+    categories.push('<a href="' + url_for(cat.path) + '" itemprop="url" rel="index"><span itemprop="name">' + cat.name + '</span></a>');
+  });
+  %>
+  <div class="post-category">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-folder"></i>
+    </span>
+    <span class="post-meta-item-text">分類於</span>
+    <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+      <%- categories.join(', ') %>
+    </span>
+  </div>
 <% } %>

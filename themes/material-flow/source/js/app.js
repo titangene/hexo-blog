@@ -143,7 +143,11 @@ var customSearch;
 
 		const liElements = Array.from($toc.find('li a'));
 		//function animate above will convert float to int.
-		const getAnchor = () => liElements.map(elem => Math.floor($(elem.getAttribute('href')).offset().top - scrollCorrection));
+		const getAnchor = function () {
+			liElements.map(elem => {
+				Math.floor($(elem.getAttribute('href')).offset().top - scrollCorrection);
+			});
+		};
 
 		let anchor = getAnchor();
 		const scrollListener = () => {
@@ -170,34 +174,6 @@ var customSearch;
 		scrollListener();
 	}
 
-	// function getPicture() {
-	// 	const $banner = $('.banner');
-	// 	if ($banner.length === 0) return;
-	// 	const url = ROOT + 'js/lovewallpaper.json';
-	// 	$.get(url).done(res => {
-	// 		if (res.data.length > 0) {
-	// 			const index = Math.floor(Math.random() * res.data.length);
-	// 			$banner.css('background-image', 'url(' + res.data[index].big + ')');
-	// 		}
-	// 	})
-	// }
-
-	// function getHitokoto() {
-	// 	const $hitokoto = $('#hitokoto');
-	// 	if($hitokoto.length === 0) return;
-	// 	const url = 'http://api.hitokoto.us/rand?length=80&encode=jsc&fun=handlerHitokoto';
-	// 	$('body').append('<script	src="%s"></script>'.replace('%s',url));
-	// 	window.handlerHitokoto = (data) => {
-	// 		$hitokoto
-	// 			.css('color','transparent')
-	// 			.text(data.hitokoto)
-	// 		if(data.source) $hitokoto.append('<cite> ——  %s</cite>'.replace('%s',data.source));
-	// 		else if(data.author) $hitokoto.append('<cite> ——  %s</cite>'.replace('%s',data.author));
-	// 		$hitokoto.css('color','white');
-	// 	}
-	// }
-
-
 	$(function () {
 		//set header
 		setHeader();
@@ -207,9 +183,6 @@ var customSearch;
 		setWaves();
 		setScrollReveal();
 		setTocToggle();
-		// getHitokoto();
-		// getPicture();
-
 
 		$(".article .video-container").fitVids();
 
@@ -217,41 +190,36 @@ var customSearch;
 			$('#loading-bar-wrapper').fadeOut(500);
 		}, 300);
 
-		if (SEARCH_SERVICE === 'google') {
+		if (SEARCH_SERVICE === 'hexo') {
+			customSearch = new HexoSearch({
+				imagePath: "/images/"
+			});
+		} else if (SEARCH_SERVICE === 'google') {
 			customSearch = new GoogleCustomSearch({
 				apiKey: GOOGLE_CUSTOM_SEARCH_API_KEY,
 				engineId: GOOGLE_CUSTOM_SEARCH_ENGINE_ID,
 				imagePath: "/images/"
 			});
-		}
-		else if (SEARCH_SERVICE === 'algolia') {
+		} else if (SEARCH_SERVICE === 'algolia') {
 			customSearch = new AlgoliaSearch({
 				apiKey: ALGOLIA_API_KEY,
 				appId: ALGOLIA_APP_ID,
 				indexName: ALGOLIA_INDEX_NAME,
 				imagePath: "/images/"
 			});
-		}
-		else if (SEARCH_SERVICE === 'hexo') {
-			customSearch = new HexoSearch({
-				imagePath: "/images/"
-			});
-		}
-		else if (SEARCH_SERVICE === 'azure') {
+		} else if (SEARCH_SERVICE === 'azure') {
 			customSearch = new AzureSearch({
 				serviceName: AZURE_SERVICE_NAME,
 				indexName: AZURE_INDEX_NAME,
 				queryKey: AZURE_QUERY_KEY,
 				imagePath: "/images/"
 			});
-		}
-		else if (SEARCH_SERVICE === 'baidu') {
+		} else if (SEARCH_SERVICE === 'baidu') {
 			customSearch = new BaiduSearch({
 				apiId: BAIDU_API_ID,
 				imagePath: "/images/"
 			});
 		}
-
 	});
 
 })(jQuery);

@@ -10,19 +10,8 @@
     <time>
       <%= date(post.date, 'YYYY-MM-DD') %>
     </time>
-		<%- partial('categories',{post:post}) %>
-    <% if (post.comments && config.disqus.enable && config.disqus.count) { %>
-      <span class="comments-count">
-        <span class="post-meta-divider">|</span>
-        <span class="post-meta-item-icon">
-          <i class="fas fa-comment"></i>
-        </span>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link" itemprop="discussionUrl">
-          <span class="disqus-comment-count"
-        data-disqus-identifier="<%= post.path %>" itemprop="commentCount"></span>
-        </a>
-      </span>
-    <% } %>
+    <%- partial('disqus-comments-count', { post: post }) %>
+    <%- partial('categories', { post: post }) %>
   </section>
   <section class="article typo">
     <div itemprop="description">
@@ -33,17 +22,17 @@
     <div>
 
     <% if (post.excerpt) { %>
-	  <div class="readmore">
+    <div class="readmore">
       <a href="<%- url_for(post.path) %>">Read More</a>
     </div>
     <% } %>
 
     <% if (post.tags && post.tags.length) { %>
-	  <div class="full-width auto-padding tags">
-      <% post.tags.each(function(item){ %>
+    <div class="full-width auto-padding tags">
+      <% post.tags.each(function(item) { %>
         <a href="<%- url_for(item.path) %>"><%=item.name %></a>
-      <%})%>
-	  </div>
+      <% }) %>
+    </div>
     <% } %>
   </section>
 </article>

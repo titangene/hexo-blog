@@ -1,0 +1,23 @@
+<span class="post-time">
+  <span class="post-meta-item-icon">
+    <i class="fa fa-calendar"></i>
+  </span>
+  <span class="post-meta-item-text">發表於</span>
+  <time
+    title="建立時間：<%= full_date(post.date) %>"
+    itemprop="dateCreated datePublished"
+    datetime="<%= moment(post.date).format() %>"><%= date(post.date, 'YYYY-MM-DD') %>
+  </time>
+  <% if (post.updated && post.updated > post.date) { %>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-calendar-check"></i>
+    </span>
+    <span class="post-meta-item-text">更新於</span>
+    <time
+      title="修改時間：<%= full_date(post.updated) %>"
+      itemprop="dateModified"
+      datetime="<%= moment(post.updated).format() %>"><%= date(post.updated, 'YYYY-MM-DD') %>
+    </time>
+  <% } %>
+</span>

@@ -9,9 +9,7 @@
         </a>
       </h2>
     <% } %>
-    <time>
-      <%= date(post.date, 'YYYY-MM-DD') %>
-    </time>
+    <%- partial('post-time', { post: post }) %>
     <%- partial('disqus-comments-count', { post: post }) %>
     <%- partial('categories', { post:post }) %>
   </section>

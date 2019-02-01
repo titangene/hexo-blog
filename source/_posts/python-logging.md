@@ -107,7 +107,109 @@ ERROR:root:error message
 CRITICAL:root:critical message
 ```
 
-### 自訂 logging 輸出格式
+## 紀錄堆疊追蹤資訊
+
+`logging` 模組也提供可以紀錄完整的堆疊追蹤 (stack traces)，若在 `logging.error()` 加上 `exc_info` 參數，並將該參數設為 `True`，就可以紀錄 Exception，如下：
+
+```python
+import logging
+
+try:
+    x = 5 / 0
+except:
+    logging.error("Catch an exception.", exc_info=True)
+```
+
+下面是輸出結果：
+
+```shell
+ERROR:root:Catch an exception.
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    x = 5 / 0
+ZeroDivisionError: division by zero
+```
+
+若沒有加上 `exc_info=True` 則無法紀錄 Exception：
+
+```python
+import logging
+
+try:
+    x = 5 / 0
+except:
+    logging.error("Catch an exception.")
+```
+
+下面是輸出結果：
+
+```shell
+ERROR:root:Catch an exception.
+```
+
+若要在 logging 內紀錄 exception 訊息，可使用 `logging.exception()`，它會將 exception 添加至訊息中，此方法的等級為 `ERROR`，也就是說 `logging.exception()` 就等同於 `logging.error(exc_info=True)`
+
+```python
+import logging
+
+try:
+    x = 5 / 0
+except:
+    logging.exception('Catch an exception.')
+```
+
+輸出結果和 `logging.error(exc_info=True)` 相同：
+
+```shell
+ERROR:root:Catch an exception.
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    x = 5 / 0
+ZeroDivisionError: division by zero
+```
+
+若不想使用 `ERROR` 級別紀錄 exception 訊息，可使用 `DEBUG`、`INFO`、`WARNING`、`CRITICAL` 級別並加上參數 `exc_info=True` 的設定：
+
+```python
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+try:
+    x = 5 / 0
+except:
+    logging.debug('Catch an exception.', exc_info=True)
+    logging.info('Catch an exception.', exc_info=True)
+    logging.warning('Catch an exception.', exc_info=True)
+    logging.critical('Catch an exception.', exc_info=True)
+```
+
+下面是輸出結果：
+
+```shell
+DEBUG:root:Catch an exception.
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    x = 5 / 0
+ZeroDivisionError: division by zero
+INFO:root:Catch an exception.
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    x = 5 / 0
+ZeroDivisionError: division by zero
+WARNING:root:Catch an exception.
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    x = 5 / 0
+ZeroDivisionError: division by zero
+CRITICAL:root:Catch an exception.
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    x = 5 / 0
+ZeroDivisionError: division by zero
+```
+
+## 自訂 logging 輸出格式
 預設的訊息輸出格式只有 `levelname`、`name`、`message`，下面是其他相關的資訊：
 
 格式化字串        |  說明
@@ -129,6 +231,8 @@ CRITICAL:root:critical message
 可將這些資訊加入 `logging.basicConfig()` 內的 `format` 參數：
 
 ```python
+import logging
+
 FORMAT = '%(asctime)s %(levelname)s: %(message)s'
 logging.basicConfig(level=logging.DEBUG, format=FORMAT)
 
@@ -149,10 +253,58 @@ logging.critical('critical message')
 2018-12-13 17:40:34,608 CRITICAL: critical message
 ```
 
+### 自訂輸出的時間格式
+在 `logging.basicConfig()` 內的 `datefmt` 參數可設定所需的時間格式，要使用 `time.strftime()` 接受的時間格式：
+
+| 參數 | 說明 |
+| --- | --- |
+| %Y | 長年份，例如：2019 |
+| %y | 短年份，例如：19 |
+| %m | 月份：01 ~ 12 |
+| %B | 月份完整名稱，例如：February |
+| %b | 月份縮寫名稱，例如：Feb |
+| %d | 日期：01 ~ 31 |
+| %H | 小時 (24 小時制)：00 ~ 23 |
+| %I | 小時 (12 小時制)：01 ~ 12 |
+| %w | 星期：0 ~ 6，0 代表星期日 |
+| %A | 星期完整名稱，例如：Friday |
+| %a | 星期縮寫名稱，例如：Fri |
+| %P | AM 或 PM |
+| %M | 分鐘：00 ~ 59 |
+| %S | 秒：00 ~ 61 |
+
+> `time.strftime()` 的時間參數詳情可參考 Python 官方的 [time — Time access and conversions — Python 3.7.2 documentation](https://docs.python.org/3/library/time.html#time.strftime) 文件。
+
+```python
+import logging
+
+LOGGING_FORMAT = '%(asctime)s %(levelname)s: %(message)s'
+DATE_FORMAT = '%Y%m%d %H:%M:%S'
+logging.basicConfig(level=logging.DEBUG, format=LOGGING_FORMAT, datefmt=DATE_FORMAT)
+
+logging.debug('debug message')
+logging.info('info message')
+logging.warning('warning message')
+logging.error('error message')
+logging.critical('critical message')
+```
+
+下面是自訂訊息的輸出結果：
+
+```log
+20190107 08:57:07 DEBUG: debug message
+20190107 08:57:07 INFO: info message
+20190107 08:57:07 WARNING: warning message
+20190107 08:57:07 ERROR: error message
+20190107 08:57:07 CRITICAL: critical message
+```
+
 ## 儲存 logging
 只要在 `logging.basicConfig()` 內的 `filename` 參數設定要儲存的日誌檔名，就可以將 logging 儲存：
 
 ```python
+import logging
+
 FORMAT = '%(asctime)s %(levelname)s: %(message)s'
 logging.basicConfig(level=logging.DEBUG, filename='myLog.log', filemode='w', format=FORMAT)
 

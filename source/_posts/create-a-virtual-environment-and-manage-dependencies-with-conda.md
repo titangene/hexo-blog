@@ -44,7 +44,7 @@ Conda 是一個開源的套件與環境管理的系統，可以在 Windows、mac
 ```shell
 $ conda create -n <environment> <package>
 
-# 安裝整套 Anaconda
+# 安裝包含 Anaconda 發行版的套件
 $ conda create -n <environment> anaconda
 
 # 指定 Python 版本
@@ -182,10 +182,34 @@ $ conda update <package>
 $ conda env remove -n <environment>
 ```
 
-### 更新 Python
-#### 更新全域環境
+## 更新 Python
+### 更新全域環境
+若目前 Python 版本是 3.6.1，下面指令只會將 Python 更新至 3.6.x 的最新版本：
+
 ```shell
 $ conda update python
+```
+
+若是要更新到其他版本可指定 Python 版本：
+
+```shell
+$ conda install python=3.6
+```
+
+## 更新 Anaconda
+更新套件管理器：
+
+```shell
+$ conda update conda
+```
+
+:::warning
+注意：Conda 會更新該版本列表中的最高版本，因此 Python 2.7 更新到 2.x 中的最高版本，而 3.x 系列依此類推。
+:::
+
+更新 anaconda 此 meta-package，可更新 Anaconda 發行版包含的套件：
+
+```shell
 $ conda update anaconda
 ```
 
@@ -194,20 +218,6 @@ $ conda update anaconda
 ```shell
 $ conda install python==$pythonversion$
 ```
-
-#### 建立新環境 (最佳方案)
-```shell
-$ conda create --name py36 python=3.6
-```
-
-#### 取得 Python 的最新版本
-```shell
-$ conda create --name py365 python=3.6.5 --channel conda-forge
-```
-
-:::warning
-注意：Conda 會更新該版本列表中的最高版本，因此 Python 2.7 更新到 2.x 中的最高版本，而 3.x 系列依此類推。
-:::
 
 ## 參考連結
 - [Managing packages | Conda documentation](https://conda.io/docs/user-guide/tasks/manage-pkgs.html)

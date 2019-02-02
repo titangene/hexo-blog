@@ -7,7 +7,7 @@ tags:
   - Blog
 categories:
   - Blog
-cover-image: /images/cover/hexo-disqus.png
+cover_image: /images/cover/hexo-disqus.png
 ---
 
 ![](../images/cover/hexo-disqus.png)

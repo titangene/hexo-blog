@@ -8,7 +8,7 @@ tags:
   - URL Shortener
 categories:
   - Other
-cover-image: /images/cover/github-url-shortener.png
+cover_image: /images/cover/github-url-shortener.png
 ---
 
 ![](../images/cover/github-url-shortener.png)

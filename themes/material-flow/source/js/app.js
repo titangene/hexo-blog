@@ -114,15 +114,6 @@ var customSearch;
 			e.stopPropagation();
 		})
 	}
-	function setWaves() {
-		Waves.attach('.flat-btn', ['waves-button']);
-		Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-		Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-		Waves.attach('.flat-box', ['waves-block']);
-		Waves.attach('.float-box', ['waves-block', 'waves-float']);
-		Waves.attach('.waves-image');
-		Waves.init();
-	}
 	function setScrollReveal() {
 		const $reveal = $('.reveal');
 		if ($reveal.length === 0) return;
@@ -180,7 +171,6 @@ var customSearch;
 		setHeaderMenu();
 		setHeaderMenuPhone();
 		setHeaderSearch();
-		setWaves();
 		setScrollReveal();
 		setTocToggle();
 

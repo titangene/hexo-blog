@@ -1,130 +1,159 @@
 .l_main {
-    width: 100%;
-    padding-right: @side-width + @gap;
-    float: left;
-    .post-list {
-        position: relative;
-        margin: 0px auto;
-        columns: 400px;
-        column-gap: 0;
-        margin: -@gap /2;
-        @media(max-width: @on-phone) {
-            margin: 0;
-        }
+  width: 100%;
+  padding-right: @side-width + @gap;
+  float: left;
+
+  .post-list {
+    position: relative;
+    margin: 0px auto;
+    columns: 400px;
+    column-gap: 0;
+    margin: -@gap /2;
+
+    @media(max-width: @on-phone) {
+      margin: 0;
     }
-    #comments {
-        position: relative;
-        padding-top: 1.5*@gap;
-        background: white;
-        @media (max-width: @on-phone) {
-            padding-top: @gap;
-        }
+  }
+
+  #comments {
+    position: relative;
+    padding-top: 1.5*@gap;
+    background: white;
+
+    @media (max-width: @on-phone) {
+      padding-top: @gap;
     }
-    .post-wrapper{
-        // for firefox
-        column-break-inside: avoid;
-        break-inside: avoid-column;
-    }
-    .mobile-post() {
-        .post {
-            padding: 1.5 * @gap @gap;
-            .meta {
-                margin-bottom: @gap;
-                .title {
-                    font-size: @article-title-size-sm;
-                }
-            }
-            .full-width {
-                margin-left: -@gap;
-                margin-right: -@gap;
-                padding-left: @gap;
-                padding-right: @gap;
-                width:~"calc(100% + 2 * @{gap})"
-            }
-            .auto-padding {
-                padding-left: @gap;
-                padding-right: @gap;
-            }
-            img,
-            .highlight {
-                margin-left: -@gap;
-                margin-right: -@gap;
-                width: auto;
-                max-width: 100%;
-                margin: 0 auto;
-            }
-        }
-    }
-    .post-wrapper {
-        padding: @gap /2;
-        .mobile-post();
-        .tags {
-            margin-bottom: -1.5*@gap;
-        }
-        @media(max-width:@on-phone) {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
+  }
+
+  .post-wrapper {
+    // for firefox
+    column-break-inside: avoid;
+    break-inside: avoid-column;
+  }
+
+  .mobile-post() {
     .post {
-        position: relative;
+      padding: 1.5 * @gap @gap;
+
+      .meta {
+        margin-bottom: @gap;
+
+        .title {
+          font-size: @article-title-size-sm;
+        }
+      }
+
+      .full-width {
+        margin-left: -@gap;
+        margin-right: -@gap;
+        padding-left: @gap;
+        padding-right: @gap;
+        width:~"calc(100% + 2 * @{gap})"
+      }
+
+      .auto-padding {
+        padding-left: @gap;
+        padding-right: @gap;
+      }
+
+      img,
+      .highlight {
+        margin-left: -@gap;
+        margin-right: -@gap;
+        width: auto;
+        max-width: 100%;
         margin: 0 auto;
-        padding: 2 * @gap 1.5*@gap;
-        //max-width: 768px;
-        background: white;
-        &:extend(.z-depth-1);
-        .meta {
-            margin-bottom: 2*@gap;
-            font-size: .8rem;
-            .title {
-                left: 0;
-                font-size: @article-title-size;
-                @media(max-width: @on-phone) {
-                    font-size: @article-title-size-sm;
-                }
-                &:before {
-                    content: none
-                }
-                a {
-                    display: inline;
-                    line-height: 1.25;
-                    font-weight: normal;
-                    color: lighten(@black, 2%);
-                    &:hover {
-                        color: @accent-color;
-                    }
-                }
-            }
-            .post-category {
-                a {
-                    font-weight: bold;
-                    color: @accent-color;
-                }
-            }
-            .post-meta-divider {
-                margin: 0 0.5em;
-            }
-            time {
-                color: @grey-color;
-            }
-            .post-meta-item-icon {
-                padding-right: 2px;
-                color: #2196f3;
-            }
-        }
-        .full-width,.highlight{
-            margin-left: -1.5* @gap;
-            margin-right: -1.5* @gap;
-            padding-left: @gap;
-            padding-right: @gap;
-            width:~"calc(100% + 3 * @{gap})";
-        }
-        img {
-            max-width: 100%;
-        }
+      }
     }
+  }
+
+  .post-wrapper {
+    padding: @gap /2;
+    .mobile-post();
+
+    .tags {
+      margin-bottom: -1.5*@gap;
+    }
+
     @media(max-width:@on-phone) {
-        padding-right: 0;
-        .mobile-post();
+      padding-left: 0;
+      padding-right: 0;
     }
+  }
+
+  .post {
+    position: relative;
+    margin: 0 auto;
+    padding: 2 * @gap 1.5*@gap;
+    //max-width: 768px;
+    background: white;
+    &:extend(.z-depth-1);
+
+    .meta {
+      margin-bottom: 2*@gap;
+      font-size: .8rem;
+
+      .title {
+        left: 0;
+        font-size: @article-title-size;
+
+        @media(max-width: @on-phone) {
+          font-size: @article-title-size-sm;
+        }
+
+        &:before {
+          content: none
+        }
+
+        a {
+          display: inline;
+          line-height: 1.25;
+          font-weight: normal;
+          color: lighten(@black, 2%);
+
+          &:hover {
+            color: @accent-color;
+          }
+        }
+      }
+
+      .post-category {
+        a {
+          font-weight: bold;
+          color: @accent-color;
+        }
+      }
+
+      .post-meta-divider {
+        margin: 0 0.5em;
+      }
+
+      time {
+        color: @grey-color;
+      }
+
+      .post-meta-item-icon {
+        padding-right: 2px;
+        color: #2196f3;
+      }
+    }
+
+    .full-width,
+    .highlight {
+      margin-left: -1.5* @gap;
+      margin-right: -1.5* @gap;
+      padding-left: @gap;
+      padding-right: @gap;
+      width:~"calc(100% + 3 * @{gap})";
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @media(max-width:@on-phone) {
+    padding-right: 0;
+    .mobile-post();
+  }
 }

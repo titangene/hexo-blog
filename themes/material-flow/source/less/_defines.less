@@ -51,7 +51,7 @@
 @text-color:       @black;
 @background-color: #EBECEE;
 @brand-color:      @material-teal;
-@accent-color:		 @material-blue;
+@accent-color:     @material-blue;
 @primary-color:    @material-deep-blue;
 @secondary-color:  @material-green;
 @grey-color:       #828282;
@@ -93,12 +93,12 @@
   transition: all @time ease-out;
 }
 // .set-placeholder({
-// 	color: @white;
-// 	font-weight: 300;
+//   color: @white;
+//   font-weight: 300;
 // })
 .set-placeholder(@rules){
   &::-webkit-input-placeholder {@rules();}
   &:-moz-placeholder {@rules();}
-	&::-moz-placeholder {@rules();}
-	&:-ms-input-placeholder {@rules();}
+  &::-moz-placeholder {@rules();}
+  &:-ms-input-placeholder {@rules();}
 }

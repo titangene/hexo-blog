@@ -2,10 +2,10 @@
   <nav id="article-nav">
     <% if (post.prev) { %>
       <a
-        href="<%=url_for(post.prev.path)%>"
+        href="<%= url_for(post.prev.path) %>"
         id="article-nav-newer"
         class="article-nav-link-wrap"
-        title="<%=post.prev.title%>"
+        title="<%= post.prev.title %>"
         rel="prev"
       >
         <strong class="article-nav-caption">Prev</strong>
@@ -18,7 +18,7 @@
         href="<%=url_for(post.next.path)%>"
         id="article-nav-newer"
         class="article-nav-link-wrap"
-        title="<%=post.next.title%>"
+        title="<%= post.next.title %>"
         rel="next"
       >
         <strong class="article-nav-caption">Next</strong>
@@ -26,6 +26,6 @@
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
       </a>
     <% } %>
-    <div style="clear:both;"></div>
+    <div class="clearfix"></div>
   </nav>
 <% } %>

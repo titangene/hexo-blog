@@ -10,7 +10,7 @@ tags:
 categories:
   - Windows
   - Linux
-cover-image: /images/cover/windows-subsystem-for-linux.png
+cover_image: /images/cover/windows-subsystem-for-linux.png
 ---
 
 ![](../images/cover/windows-subsystem-for-linux.png)

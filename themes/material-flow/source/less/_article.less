@@ -462,5 +462,76 @@
         }
     }
 }
+
+#list_related_posts {
+    h2 {
+        position: relative;
+        font-family: 'Titillium Web',-apple-system,Helvetica,"Hiragino Sans GB","Hiragino Sans GB W3",Source Han Sans CN Regular,WenQuanYi Micro Hei,"Microsoft YaHei",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-weight: normal;
+        margin: 20px auto;
+        left: 20px;
+        &::before {
+            position: absolute;
+            left: -20px;
+            top: 0px;
+            content: "#";
+            color: #2196f3;
+            font-weight: normal;
+        }
+    }
+    ul.related-posts {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        list-style: none;
+        li.related-posts-item {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 0;
+            border-bottom: 1px solid #eaeaea;
+            &:first-of-type {
+                padding-top: 0;
+            }
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+        img {
+            float: left;
+            width: 160px;
+            margin-right: 10px;
+            @media (max-width: @modal-threshold) {
+                width: 120px;
+            }
+            @media (max-width: @on-phone-L) {
+                display: none;
+            }
+        }
+        .related-posts-content {
+            margin-top: 4px;
+            overflow: hidden;
+        }
+        a.related-posts-link {
+            color: #1791f2;
+        }
+        .related-posts-item-abstract {
+            position: relative;
+            overflow: hidden;
+            // white-space: nowrap;
+            text-overflow: ellipsis;
+            color: #888;
+            font-size: 85%;
+            max-height: 48px;
+            &::after {
+                content: "";
+                text-align: right;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 80px;
+                height: 24px;
+                background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.8) 20%, #fff);
+            }
+        }
     }
 }

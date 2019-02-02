@@ -29,6 +29,10 @@
     <% } %>
   </section>
   <%- partial('article-nav', { post: post }) %>
+  <section id="list_related_posts">
+    <h2>相關文章</h2>
+    <%- list_related_posts({ maxCount: 6, orderBy: 'random', 'generateAbstract': true, abstractLength: 60 }) %>
+  </section>
   <% if (post.comments && config.disqus.enable) { %>
     <section class="comments" id="comments">
       <div id="disqus_thread">

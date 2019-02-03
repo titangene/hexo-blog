@@ -61,6 +61,19 @@ widgets:
   # - categories
   # - tagcloud
 
+# SNS (Social Network Services) Share Switch
+sns_share:
+  enable: true
+  facebook: true
+  messenger: true
+  twitter: true
+  linkedin: true
+  googleplus: false
+  pinterest: false
+  telegram: true
+  mail: false
+  print: false
+
 # Less
 less:
   compress: true

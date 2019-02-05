@@ -2,10 +2,14 @@
   <%
     var encodedUrl = encodeURIComponent(post.permalink);
     var postTags = [];
-    post.tags.forEach(function(tag) {
-      postTags.push(tag.name);
-    });
-    postTags = postTags.join(',').replace(' ', '');
+    if (post.tags && post.tags.length) {
+      post.tags.each(function(tag) {
+        postTags.push(tag.name);
+      });
+      postTags = postTags.join(',').replace(' ', '');
+    } else {
+      postTags = '';
+    }
   %>
   <div class="article-share-links">
     <span>分享：</span>

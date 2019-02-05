@@ -11,8 +11,8 @@
     </div>
     <% if (post.tags && post.tags.length) { %>
     <div class="article-tags tags">
-      <% post.tags.each(function(item) { %>
-        <a href="<%- url_for(item.path) %>"><%=item.name %></a>
+      <% post.tags.forEach(function(tag) { %>
+        <a href="<%- url_for(tag.path) %>" title="<%= tag.name %>"><%=tag.name %></a>
       <% }) %>
     </div>
     <% } %>

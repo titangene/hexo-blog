@@ -6,13 +6,9 @@
     </span>
     <a
       href="<%- post.permalink %>#disqus_thread"
-      class="article-comment-link"
+      class="article-comment-count"
+      data-disqus-identifier="<%= post.path %>"
       itemprop="discussionUrl">
-      <span
-        class="disqus-comment-count"
-        data-disqus-identifier="<%= post.path %>"
-        itemprop="commentCount"
-      ></span>
     </a>
   </span>
 <% } %>

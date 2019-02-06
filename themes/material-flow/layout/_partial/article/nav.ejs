@@ -3,7 +3,7 @@
     <% if (post.prev) { %>
       <a
         href="<%= url_for(post.prev.path) %>"
-        id="article-nav-newer"
+        id="article-nav-prev"
         class="article-nav-link-wrap"
         title="<%= post.prev.title %>"
         rel="prev"
@@ -15,8 +15,8 @@
     <% } %>
     <% if (post.next) { %>
       <a
-        href="<%=url_for(post.next.path)%>"
-        id="article-nav-newer"
+        href="<%=url_for(post.next.path) %>"
+        id="article-nav-next"
         class="article-nav-link-wrap"
         title="<%= post.next.title %>"
         rel="next"

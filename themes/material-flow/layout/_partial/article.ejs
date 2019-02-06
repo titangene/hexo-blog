@@ -28,13 +28,15 @@
     </div>
     <% } %>
   </section>
-  <%- partial('article-nav', { post: post }) %>
+  <%- partial('article/share-link', { post: post }) %>
+  <%- partial('article/nav', { post: post }) %>
   <section id="list_related_posts">
     <h2>相關文章</h2>
     <%- list_related_posts({ maxCount: 6, orderBy: 'random', 'generateAbstract': true, abstractLength: 60 }) %>
   </section>
   <% if (post.comments && config.disqus.enable) { %>
     <section class="comments" id="comments">
+      <h2>討論區</h2>
       <div id="disqus_thread">
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       </div>

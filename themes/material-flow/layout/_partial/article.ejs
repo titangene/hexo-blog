@@ -1,19 +1,8 @@
 <article id="<%= post.layout %>-<%= post.slug %>"
   class="post white-box article-type-<%= post.layout %>"
   itemscope itemprop="blogPost">
-  <section class='meta'>
-    <% if (post.title) { %>
-      <h2 class="title">
-        <a href="<%- url_for(post.path) %>">
-          <%= post.title %>
-        </a>
-      </h2>
-    <% } %>
-    <%- partial('post-time', { post: post }) %>
-    <%- partial('disqus-comments-count', { post: post }) %>
-    <%- partial('categories', { post:post }) %>
-  </section>
-  <% if(post.toc !== false) { %>
+  <%- partial('post/meta', { post: post }) %>
+  <% if (post.toc !== false) { %>
     <section class="toc-wrapper"><%- toc(post.content, { list_number: false }) %></section>
   <% } %>
   <section class="article typo">

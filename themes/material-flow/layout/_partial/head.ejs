@@ -3,29 +3,13 @@
 <head>
   <meta charset="utf-8">
   <%- partial('title', { page: page }) %>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <%
-    var title = page.title;
-    if (is_archive()) {
-      title = 'Archives';
-      if (is_month())
-        title += ': ' + page.year + '/' + page.month;
-      else if (is_year())
-        title += ': ' + page.year;
-    }
-    else if (is_category())
-      title = 'Category: ' + page.category;
-    else if (is_tag())
-      title = 'Tag: ' + page.tag;
-  %>
-  <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
   <meta name="description" content="<%= config.description %>" />
-  <meta name="keywords" content="<%=(config.keywords||[]).join(',') %>" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <%- favicon_tag(config.favicon) %>
-  <%- feed_tag(config.feed.path, {title: config.title}) %>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%- feed_tag(config.feed.path, { title: config.title }) %>
   <%- open_graph({
     image: cover_image,
     twitter_id: theme.twitter,
@@ -33,9 +17,10 @@
     fb_admins: config.facebook_sdk.fb_admin,
     fb_app_id: config.facebook_sdk.app_id}) %>
 
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Inconsolata|Titillium+Web">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <%- css('style.css') %>
+  <%- partial('script/google-analytics') %>
   <script>
     function setLoadingBarProgress(num) {
       document.getElementById('loading-bar').style.width=num+"%";

@@ -1,0 +1,12 @@
+<section class="meta">
+  <% if (post.title) { %>
+    <h2 class="title">
+      <a href="<%- url_for(post.path) %>">
+        <%= post.title %>
+      </a>
+    </h2>
+  <% } %>
+  <%- partial('post-time', { post: post }) %>
+  <%- partial('disqus-comments-count', { post: post }) %>
+  <%- partial('categories', { post: post }) %>
+</section>

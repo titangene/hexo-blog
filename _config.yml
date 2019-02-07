@@ -123,12 +123,16 @@ theme: material-flow
 # use url, not username
 social:
 - slug: github
+  icon: "fab fa-github-alt"
   url: https://github.com/titangene
 - slug: facebook
+  icon: "fab fa-facebook-square"
   url: https://www.facebook.com/titangene.tw
 - slug: instagram
+  icon: "fab fa-instagram"
   url: https://www.instagram.com/titangene/
 - slug: rss
+  icon: "fas fa-rss"
   url: /atom.xml
 
 # Deployment
@@ -171,7 +175,6 @@ sitemap:
 nofollow:
   exclude:
   - github.com
-  - titangene.github.io
 
 # hexo-generator-feed
 feed:

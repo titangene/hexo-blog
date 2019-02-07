@@ -8,7 +8,7 @@
         if (value.url && value.slug) { %>
         <a href="<%= value.url %>" class="social <%= value.slug %>"
           target="_blank" rel="external">
-          <span class="icon icon-<%= value.slug %>"></span>
+          <span class="<%= value.icon %>"></span>
         </a>
       <% } }); %>
     <% } %>
@@ -17,11 +17,10 @@
     © 2018 - <%= current %> <span itemprop="copyrightHolder"><%= config.author %></span>
   </div>
   <div>
-    Powered by <a href="https://hexo.io/" class="codename">Hexo</a> - 
-    Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a>
+    Powered by <a href="https://hexo.io/" class="codename" rel="external">Hexo</a> - Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename" rel="external">MaterialFlow</a>
   </div>
   <div>
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external">
       <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
     </a>
   </div>

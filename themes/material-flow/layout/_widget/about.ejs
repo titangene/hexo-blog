@@ -21,7 +21,7 @@
       <% config.social.forEach(function(value, key) {
           if (value.url && value.slug) { %>
           <a itemprop="sameAs" href="<%= value.url %>" class="social <%= value.slug %>" target="_blank" rel="external">
-              <span class="icon icon-<%= value.slug %>"></span>
+              <span class="<%= value.icon %>"></span>
           </a>
       <% } }); %>
       </div>

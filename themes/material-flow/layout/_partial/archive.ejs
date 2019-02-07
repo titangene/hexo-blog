@@ -23,14 +23,14 @@
   <nav id="page-nav">
     <% if (page.prev != 0) { %>
     <a class="prev" rel="prev" href="<%= url_for(page.prev_link) %>">
-      <span class="icon icon-chevron-left"></span>
+      <i class="fas fa-angle-left"></i>
       <span class="text">Prev</span>
     </a>
     <% } %>
     <% if (page.next != 0) { %>
     <a class="next" rel="next" href="<%= url_for(page.next_link) %>">
       <span class="text">Next</span>
-      <span class="icon icon-chevron-right"></span>
+      <i class="fas fa-angle-right"></i>
     </a>
     <% } %>
   </nav>

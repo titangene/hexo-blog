@@ -203,15 +203,10 @@
       padding: 0;
     }
 
-    &.highlight::before {
-      content: attr(data-lang);
-      display: block;
-      text-align: right;
-      color: #b1b1b1;
-      font-size: 0.6em;
-      line-height: 15px;
-      height: 15px;
-      font-weight: 500;
+    &.highlight {
+      position: relative;
+      margin: 1rem 0;
+      padding-top: 22px;
     }
   }
 
@@ -390,6 +385,49 @@
       font-size: 13px;
       line-height: 1.6em;
     }
+  }
+}
+
+.code-highlight {
+  position: relative;
+
+  &::before {
+    content: attr(data-lang);
+    font-family: "Roboto Mono", Consolas, monospace, sans-serif;
+    font-size: 0.6em;
+    color: #b1b1b1;
+    line-height: 18px;
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    z-index: 1;
+
+    @media (max-width: @on-phone) {
+      right: 37px;
+    }
+  }
+}
+
+.codecopy-btn {
+  width: 24px;
+  height: 26px;
+  position: absolute;
+  top: 0;
+  right: -24px;
+  border: none;
+  box-shadow: none;
+  background: none;
+  z-index: 1;
+  font-size: 12px;
+  color: #fff;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #7bf;
+  }
+
+  @media (max-width: @on-phone) {
+    right: 6px;
   }
 }
 

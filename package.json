@@ -5,7 +5,7 @@
   "scripts": {
     "serve-dev": "hexo server --config _config.yml,_config.local.yml",
     "serve-prod": "hexo server --config _config.yml,_config.release.yml",
-    "hexo-g": "hexo generate --config _config.yml,_config.release.yml"
+    "hexo-g": "hexo clean && hexo generate --config _config.yml,_config.release.yml"
   },
   "hexo": {
     "version": "3.8.0"

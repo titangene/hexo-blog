@@ -1,5 +1,11 @@
 # custom
+icon_size: 200
+
 avatar_cover: /images/avatar_cover.jpg
+
+post_cover:
+  width: 1200
+  height: 629
 
 # Search
 search:

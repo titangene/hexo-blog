@@ -135,6 +135,10 @@ social:
   icon: "fas fa-rss"
   url: /atom.xml
 
+twitter:
+  personal: "@titangeneTW"
+  blog: "@titangene_blog"
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

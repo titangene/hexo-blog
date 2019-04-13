@@ -273,8 +273,7 @@ Flutter 預設會以 `adb` 工具基於的 Android SDK 版本來使用，若想�
 
 ![](../images/flutter-install-on-windows/2018-10-23-07-14-39.png)
 
-# 入門
-## Android Studio
+## 使用 Android Studio 開發
 ### 建立新 app
 在 Android Studio 中建立 Flutter 專案 ( **File** > **New** > **New Flutter Project...** )
 
@@ -335,7 +334,7 @@ D/EGL_emulation( 4777): eglMakeCurrent: 0x7073cf3b10a0: ver 2 0 (tinfo 0x7073c56
 ### 嘗試 hot reload
 修改一些內容並儲存，app 就會自動做 hot reload，就會很快地看到最新的更新。
 
-## VS Code
+## 使用 VS Code 開發
 ### 建立新 app
 1. 按 `F1` 或 `ctrl + shift + p` 後，輸入 **Flutter** 並點選 **Flutter: New Project**
 
@@ -369,7 +368,7 @@ D/EGL_emulation( 4777): eglMakeCurrent: 0x7073cf3b10a0: ver 2 0 (tinfo 0x7073c56
 
 ![](../images/flutter-install-on-windows/2018-10-23-07-16-52.png)
 
-## Terminal + editor
+## 使用 Terminal + Editor 開發
 ### 建立新 app
 使用 `flutter create` 指令來建立 Flutter 專案，裡面包含 [Material Components](https://material.io/design/) 的範例 app。app 的程式碼在 `lib/main.dart`。
 

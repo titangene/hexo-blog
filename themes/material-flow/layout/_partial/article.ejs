@@ -19,7 +19,19 @@
   </section>
   <%- partial('article/share-link', { post: post }) %>
   <%- partial('article/nav', { post: post }) %>
-  <% if (post.tags && post.tags.length) { %>
+  <%
+    var relatedPostsCount = 0;
+    post.tags.each(tag => {
+      tag.posts.filter(_post => {
+        if (_post.title === post.title) {
+          return false;
+        }
+        relatedPostsCount ++;
+        return true;
+      });
+    });
+  %>
+  <% if (post.tags && relatedPostsCount > 0) { %>
     <section id="list_related_posts">
       <h2>相關文章</h2>
       <%- list_related_posts({ maxCount: 6, orderBy: 'random', 'generateAbstract': true }) %>

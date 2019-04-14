@@ -21,15 +21,17 @@
   <%- partial('article/nav', { post: post }) %>
   <%
     var relatedPostsCount = 0;
-    post.tags.each(tag => {
-      tag.posts.filter(_post => {
-        if (_post.title === post.title) {
-          return false;
-        }
-        relatedPostsCount ++;
-        return true;
+    if (post.tags) {
+      post.tags.each(tag => {
+        tag.posts.filter(_post => {
+          if (_post.title === post.title) {
+            return false;
+          }
+          relatedPostsCount ++;
+          return true;
+        });
       });
-    });
+    }
   %>
   <% if (post.tags && relatedPostsCount > 0) { %>
     <section id="list_related_posts">

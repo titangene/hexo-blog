@@ -45,7 +45,7 @@ cover_image: /images/cover/gcp.jpg
 
 ![](../images/gcp-vm-nignx-web-server/2019-04-13-14-21-15.png)
 
-3. Lab 會提供給你免費暫時的 GCP 帳號，複製帳號和密碼，然後點擊「Open Google Console」：
+3. Lab 會提供給你免費暫時的 GCP 帳號，複製帳號和密碼，然後點擊「Open Google Console」開啟 [GCP Console](https://cloud.google.com/storage/docs/cloud-console)：
 
 ![](../images/gcp-vm-nignx-web-server/2019-04-13-15-33-31.png)
 
@@ -54,7 +54,9 @@ cover_image: /images/cover/gcp.jpg
 4. 接著就會開啟登入頁面，建議另外開 Chrome 無痕模式來登入 lab 提供的帳號和密碼，因為 Chrome 會紀錄帳密，現在登入的只是暫時帳號，未來不需要用到：
 
 :::warning
-注意：這邊是登入 lab 提供的帳號，如果你有自己的 GCP 帳號，請不要用於此 lab，避免產生費用
+注意：這邊是登入 lab 提供的帳號 (也就是 email 必須為 `googlexxxxxx_student@qwiklabs.net` )，如果你有自己的 GCP 帳號，請不要用於此 lab，避免產生費用
+
+> 類似於 `googlexxxxxx_student@qwiklabs.net` 的帳號是一個 Google 帳號，專為 Qwiklabs 學生使用而建立的。它具有特定的域名 (也就是 `qwiklabs.net` )，並且已分配了 IAM 角色，允許你去存取該 GCP 專案。
 :::
 
 ![](../images/gcp-vm-nignx-web-server/2019-04-13-14-22-30.png)
@@ -70,6 +72,10 @@ cover_image: /images/cover/gcp.jpg
 7. 勾選同意服務條款：
 
 ![](../images/gcp-vm-nignx-web-server/2019-04-13-14-24-15.png)
+
+之後就可以開始使用 GCP Console 囉：
+
+![](../images/gcp-vm-nignx-web-server/2019-04-14-14-23-55.png)
 
 ## 啟動 Google Cloud Shell
 Google Cloud Shell 是載入了開發工具的 VM，它提供 5GB 的 home 目錄，並在 Google Cloud 上執行。可用 Google Cloud Shell 提供的 command-line 來存取 GCP 的資源。
@@ -465,4 +471,5 @@ nginx  default  INGRESS    1000      tcp:80        False
 
 ## 參考來源
 - [Creating a Virtual Machine | Qwiklabs](https://www.qwiklabs.com/focuses/3563?parent=catalog)
+- [A Tour of Qwiklabs and the Google Cloud Platform | Qwiklabs](https://google.qwiklabs.com/focuses/2794?parent=catalog)
 - [在 GCP 上開立一台虛擬機 | Ray's Coding Journey](https://tn710617.github.io/zh-tw/createAVirtualMachineInGCP/)

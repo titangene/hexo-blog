@@ -24,6 +24,8 @@ cover_image: /images/cover/gcp.jpg
 
 可以學到如何使用 Google Cloud Platform (GCP) Console 和 `gcloud` command-line 建立各種機器類型的虛擬機 instance (實例)，還能學習如何將 NGINX web server 連接到 VM。
 
+> 若想了解如何 [在 GCP 上建立 VM 架設 Windows Server](./gcp-vm-windows-server.html) 可參考此篇。
+
 ## 本篇將會做什麼？
 - 使用 GCP Console 建立 VM
 - 使用 `gcloud` command-line 建立 VM

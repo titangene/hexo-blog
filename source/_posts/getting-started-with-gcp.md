@@ -29,7 +29,8 @@ cover_image: /images/cover/gcp.jpg
 - 了解 Cloud Shell 並使用 `gcloud` toolkit 來執行指令
 - 了解 API library 並查看其主要功能
 
-> 若想了解怎麼 [在 GCP 上建立 VM 架設 NIGNX Web server](./gcp-vm-nignx-web-server.html) 可參考此篇。
+> 若想了解如何 [在 GCP 上建立 VM 架設 NIGNX Web server](./gcp-vm-nignx-web-server.html) 可參考此篇。
+> 若想了解如何 [在 GCP 上建立 VM 架設 Windows Server](./gcp-vm-windows-server.html) 可參考此篇。
 
 > 其他關於 Qwiklab 的介紹，可至原文 [A Tour of Qwiklabs and the Google Cloud Platform](https://www.qwiklabs.com/focuses/2794?parent=catalog) 查看。
 

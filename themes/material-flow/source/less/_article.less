@@ -141,6 +141,18 @@
   a {
     color: darken(@accent-color, 2%);
 
+    code {
+      color: #83c8fe;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: darken(#83c8fe, 10%);
+      }
+    }
+
     &:hover {
       color: darken(@accent-color, 3%);
       background: fade(@accent-color, 10%);
@@ -148,7 +160,7 @@
 
     &:active {
       background: fade(@accent-color, 20%);
-      color: @white;
+      color: darken(@accent-color, 10%);
     }
   }
 
@@ -531,12 +543,14 @@
 
 .article-share-links {
   margin: 20px 0;
+
   span {
     display: block;
     float: left;
     height: 40px;
     line-height: 40px;
   }
+
   &>a {
     padding: 10px;
     font-size: 20px;

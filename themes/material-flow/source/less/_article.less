@@ -368,7 +368,17 @@
     .highlight {
       margin-left: -16px;
       margin-right: -16px;
-      width: calc(100% + 3 * 10.5px);
+      width: calc(100% + 2 * 16px);
+    }
+
+    .code-highlight {
+      &::before {
+        right: 23px;
+      }
+    }
+
+    .codecopy-btn {
+      right: -8px;
     }
 
     blockquote>p:last-of-type {

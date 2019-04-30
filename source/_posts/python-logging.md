@@ -3,7 +3,6 @@ title: Python - 日誌 (logging) 模組
 date: 2018-12-13 18:32:46
 author: Titangene
 tags:
-  - Python
   - Logging
 categories:
   - Python
@@ -26,14 +25,14 @@ import logging
 
 `logging` 模組預先定義了 6 種等級以及對應的 log 輸出函數 (除了 `logging.NOTSET` 沒有對應的輸出函數)：
 
-等級 | 等級數值 | 輸出函數 | 說明
---- | --- | --- | --- | ---
-NOTSET   | 0  | 無對應的輸出函數        | 未設定
-DEBUG    | 10 | `logging.debug()`    | 除錯
-INFO     | 20 | `logging.info()`     | 訊息
-WARNING  | 30 | `logging.warning()`  | 警告
-ERROR    | 40 | `logging.error()`    | 錯誤
-CRITICAL | 50 | `logging.critical()` | 嚴重錯誤
+| 等級     | 等級數值 | 輸出函數             | 說明     |
+| -------- | -------- | -------------------- | -------- |
+| NOTSET   | 0        | 無對應的輸出函數     | 未設定   |
+| DEBUG    | 10       | `logging.debug()`    | 除錯     |
+| INFO     | 20       | `logging.info()`     | 訊息     |
+| WARNING  | 30       | `logging.warning()`  | 警告     |
+| ERROR    | 40       | `logging.error()`    | 錯誤     |
+| CRITICAL | 50       | `logging.critical()` | 嚴重錯誤 |
 
 若要查詢各等級的數值，可直接呼叫該等級：
 
@@ -210,23 +209,24 @@ ZeroDivisionError: division by zero
 ```
 
 ## 自訂 logging 輸出格式
+
 預設的訊息輸出格式只有 `levelname`、`name`、`message`，下面是其他相關的資訊：
 
-格式化字串        |  說明
---------------- | ---
-`%(asctime)s`     |  日期時間, 格式為 `YYYY-MM-DD HH:mm:SS,ms`，例如：2018-12-13 17:20:30,567
-`%(filename)s`    |  模組檔名
-`%(funcName)s`    |  函數名稱
-`%(levelname)s`   |  日誌的等級名稱
-`%(levelno)s`     |  日誌的等級數值
-`%(lineno)d`      |  呼叫日誌函數所在的行數
-`%(message)s`     |  訊息
-`%(module)s`      |  模組名稱
-`%(name)s`        |  logger 的名稱
-`%(pathname)s`    |  檔案的完整路徑 (如果可用)
-`%(process)d`     |  process ID (如果可用)
-`%(thread)d`      |  執行緒 ID (如果可用)
-`%(threradName)s` |  執行緒名稱
+| 格式化字串        | 說明                                                                     |
+| ----------------- | ------------------------------------------------------------------------ |
+| `%(asctime)s`     | 日期時間, 格式為 `YYYY-MM-DD HH:mm:SS,ms`，例如：2018-12-13 17:20:30,567 |
+| `%(filename)s`    | 模組檔名                                                                 |
+| `%(funcName)s`    | 函數名稱                                                                 |
+| `%(levelname)s`   | 日誌的等級名稱                                                           |
+| `%(levelno)s`     | 日誌的等級數值                                                           |
+| `%(lineno)d`      | 呼叫日誌函數所在的行數                                                   |
+| `%(message)s`     | 訊息                                                                     |
+| `%(module)s`      | 模組名稱                                                                 |
+| `%(name)s`        | logger 的名稱                                                            |
+| `%(pathname)s`    | 檔案的完整路徑 (如果可用)                                                |
+| `%(process)d`     | process ID (如果可用)                                                    |
+| `%(thread)d`      | 執行緒 ID (如果可用)                                                     |
+| `%(threradName)s` | 執行緒名稱                                                               |
 
 可將這些資訊加入 `logging.basicConfig()` 內的 `format` 參數：
 
@@ -254,24 +254,25 @@ logging.critical('critical message')
 ```
 
 ### 自訂輸出的時間格式
+
 在 `logging.basicConfig()` 內的 `datefmt` 參數可設定所需的時間格式，要使用 `time.strftime()` 接受的時間格式：
 
-| 參數 | 說明 |
-| --- | --- |
-| %Y | 長年份，例如：2019 |
-| %y | 短年份，例如：19 |
-| %m | 月份：01 ~ 12 |
-| %B | 月份完整名稱，例如：February |
-| %b | 月份縮寫名稱，例如：Feb |
-| %d | 日期：01 ~ 31 |
-| %H | 小時 (24 小時制)：00 ~ 23 |
-| %I | 小時 (12 小時制)：01 ~ 12 |
-| %w | 星期：0 ~ 6，0 代表星期日 |
-| %A | 星期完整名稱，例如：Friday |
-| %a | 星期縮寫名稱，例如：Fri |
-| %P | AM 或 PM |
-| %M | 分鐘：00 ~ 59 |
-| %S | 秒：00 ~ 61 |
+| 參數 | 說明                         |
+| ---- | ---------------------------- |
+| %Y   | 長年份，例如：2019           |
+| %y   | 短年份，例如：19             |
+| %m   | 月份：01 ~ 12                |
+| %B   | 月份完整名稱，例如：February |
+| %b   | 月份縮寫名稱，例如：Feb      |
+| %d   | 日期：01 ~ 31                |
+| %H   | 小時 (24 小時制)：00 ~ 23    |
+| %I   | 小時 (12 小時制)：01 ~ 12    |
+| %w   | 星期：0 ~ 6，0 代表星期日    |
+| %A   | 星期完整名稱，例如：Friday   |
+| %a   | 星期縮寫名稱，例如：Fri      |
+| %P   | AM 或 PM                     |
+| %M   | 分鐘：00 ~ 59                |
+| %S   | 秒：00 ~ 61                  |
 
 > `time.strftime()` 的時間參數詳情可參考 Python 官方的 [time — Time access and conversions — Python 3.7.2 documentation](https://docs.python.org/3/library/time.html#time.strftime) 文件。
 
@@ -300,6 +301,7 @@ logging.critical('critical message')
 ```
 
 ## 儲存 logging
+
 只要在 `logging.basicConfig()` 內的 `filename` 參數設定要儲存的日誌檔名，就可以將 logging 儲存：
 
 ```python

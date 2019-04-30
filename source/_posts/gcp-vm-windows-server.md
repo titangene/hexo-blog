@@ -5,10 +5,9 @@ author: Titangene
 tags:
   - GCP
   - VM
-  - Windows Server
 categories:
+  - Windows Server
   - Cloud
-  - Windows
 cover_image: /images/cover/gcp.jpg
 ---
 

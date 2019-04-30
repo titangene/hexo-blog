@@ -3,12 +3,11 @@ title: Flutter 自訂字型
 date: 2018-10-29 11:40:00
 author: Titangene
 tags:
-  - Flutter
   - Dart
-  - Native App
   - Font
 categories:
-  - Native App
+  - Flutter
+  - Mobile App
 cover_image: /images/cover/flutter.jpg
 ---
 
@@ -19,6 +18,7 @@ cover_image: /images/cover/flutter.jpg
 <!-- more -->
 
 ## 將字型檔放入專案資料夾內
+
 此範例是放在 `./assets/fonts` 資料夾內：
 
 ```

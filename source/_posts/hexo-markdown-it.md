@@ -5,7 +5,6 @@ author: Titangene
 tags:
   - Hexo
   - Markdown
-  - Blog
 categories:
   - Blog
 cover_image: /images/cover/hexo.jpg
@@ -18,6 +17,7 @@ cover_image: /images/cover/hexo.jpg
 <!-- more -->
 
 ## 更換渲染引擎
+
 Hexo 預設的 markdown 渲染引擎是 [`marked`](https://github.com/markedjs/marked)，並使用 [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked) 此 Hexo 外掛來將 Markdown 轉換成靜態檔案 HTML，但因前面提到的需求，所以要刪除原本的渲染引擎
 
 ```shell
@@ -34,7 +34,7 @@ $ npm install git+https://github.com/hexojs/hexo-renderer-markdown-it.git --save
 
 ```javascript
 if (opt.plugins) {
-  parser = opt.plugins.reduce(function (parser, pugs) {
+  parser = opt.plugins.reduce(function(parser, pugs) {
     if (pugs instanceof Object && pugs.name) {
       return parser.use(require(pugs.name), pugs.options);
     } else {
@@ -48,13 +48,14 @@ if (opt.plugins) {
 
 ```javascript
 if (opt.plugins) {
-  parser = opt.plugins.reduce(function (parser, pugs) {
+  parser = opt.plugins.reduce(function(parser, pugs) {
     return parser.use(require(pugs));
   }, parser);
 }
 ```
 
 ## 安裝渲染引擎外掛套件
+
 我們可以參考 [HackMD](https://github.com/hackmdio/codimd/blob/master/package.json) 的相依套件，只要是名為 `markdown-it-xxx` 的套件就是渲染引擎 `markdown-it` 的外掛：
 
 ```json
@@ -73,13 +74,14 @@ if (opt.plugins) {
     "markdown-it-mathjax": "^2.0.0",
     "markdown-it-regexp": "^0.4.0",
     "markdown-it-sub": "^1.0.0",
-    "markdown-it-sup": "^1.0.0",
+    "markdown-it-sup": "^1.0.0"
     // ...
   }
 }
 ```
 
 而下列是我選擇要安裝的外掛：
+
 - [markdown-it-abbr](https://github.com/markdown-it/markdown-it-abbr)
 - [markdown-it-container](https://github.com/markdown-it/markdown-it-container)
 - [markdown-it-deflist](https://github.com/markdown-it/markdown-it-deflist)
@@ -98,9 +100,11 @@ $ npm i markdown-it-abbr markdown-it-checkbox markdown-it-container markdown-it-
 ```
 
 ### markdown-it-mathjax
+
 為何我未安裝 `markdown-it-mathjax` 這個外掛？這是因為...我之後再單獨寫一篇文章來介紹如何在 Markdown 加上數學式 MathJax。
 
 ### markdown-it-task-checkbox
+
 為何我會比 HackMD 多安裝 `markdown-it-task-checkbox` 這個外掛？
 
 有使用過 HackMD 的朋友都知道，只要在 HackMD 輸入下列 Markdown 語法：
@@ -114,8 +118,12 @@ $ npm i markdown-it-abbr markdown-it-checkbox markdown-it-container markdown-it-
 
 ```html
 <ul>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox "><label></label>task 1</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked=""><label></label>task 2</li>
+  <li class="task-list-item">
+    <input type="checkbox" class="task-list-item-checkbox " /><label></label>task 1
+  </li>
+  <li class="task-list-item">
+    <input type="checkbox" class="task-list-item-checkbox" checked="" /><label></label>task 2
+  </li>
 </ul>
 ```
 
@@ -127,17 +135,25 @@ $ npm i markdown-it-abbr markdown-it-checkbox markdown-it-container markdown-it-
 
 ```javascript
 if (/^\s*\[[x ]\]\s*/.test(html)) {
-  li.innerHTML = html.replace(/^\s*\[ \]\s*/, `<input type="checkbox" class="task-list-item-checkbox" ${disabled}><label></label>`)
-            .replace(/^\s*\[x\]\s*/, `<input type="checkbox" class="task-list-item-checkbox" checked ${disabled}><label></label>`)
+  li.innerHTML = html
+    .replace(
+      /^\s*\[ \]\s*/,
+      `<input type="checkbox" class="task-list-item-checkbox" ${disabled}><label></label>`,
+    )
+    .replace(
+      /^\s*\[x\]\s*/,
+      `<input type="checkbox" class="task-list-item-checkbox" checked ${disabled}><label></label>`,
+    );
   if (li.tagName.toLowerCase() !== 'li') {
-    li.parentElement.setAttribute('class', 'task-list-item')
+    li.parentElement.setAttribute('class', 'task-list-item');
   } else {
-    li.setAttribute('class', 'task-list-item')
+    li.setAttribute('class', 'task-list-item');
   }
 }
 ```
 
-## 設定 _config.yml
+## 設定 \_config.yml
+
 將下面這些設定在根目錄的 `_config.yml` 設定檔中：
 
 ```yaml

@@ -3,11 +3,10 @@ title: Flutter 載入圖片
 date: 2018-12-31 21:10:00
 author: Titangene
 tags:
-  - Flutter
   - Dart
-  - Native App
 categories:
-  - Native App
+  - Flutter
+  - Mobile App
 cover_image: /images/cover/flutter.jpg
 ---
 
@@ -18,6 +17,7 @@ cover_image: /images/cover/flutter.jpg
 <!-- more -->
 
 ## 指定資源
+
 Flutter 是在根目錄內的 `pubspec.yaml` 檔案來設定應用程式所需的資源，設定的資源沒有順序關係。
 
 若要指定某些資源，資源的路徑是相對於 `pubspec.yaml` 檔案的相對路徑：
@@ -47,6 +47,7 @@ flutter:
 ```
 
 ## 載入圖片
+
 可使用 `Image.asset()` 來載入圖片，裡面的參數就是圖片的路徑：
 
 ```dart
@@ -74,4 +75,5 @@ Widget build(BuildContext context) {
 ![](../images/flutter-loading-images/flutter_loading-images.png)
 
 ## 參考連結
+
 - [Adding assets and images - Flutter](https://flutter.io/docs/development/ui/assets-and-images)

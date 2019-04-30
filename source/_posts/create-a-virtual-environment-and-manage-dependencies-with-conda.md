@@ -3,7 +3,6 @@ title: 用 Conda 建立虛擬環境和管理相依套件
 date: 2018-11-19 17:10:00
 author: Titangene
 tags:
-  - Python
   - Anaconda
   - Conda
   - Virtual Environment
@@ -34,9 +33,11 @@ Conda 是一個開源的套件與環境管理的系統，可以在 Windows、mac
 <!-- more -->
 
 ## 安裝 Anaconda
+
 至 [Anaconda](https://www.anaconda.com/download/) 官網下載並安裝，建議選擇 Python 3.x 的版本。
 
 ## 建立虛擬環境
+
 從指定套件列表中建立新的 conda 環境：
 
 - `-n`，`--name`：設定環境名稱
@@ -84,6 +85,7 @@ hello                 *  D:\Users\Titan\Anaconda3\envs\hello
 > `*` 代表目前正在使用的虛擬環境
 
 ## 離開虛擬環境
+
 如果要將現在環境改回預設值 `base` (離開目前環境) 可使用下面指令：
 
 ```shell
@@ -95,6 +97,7 @@ $ source deactivate
 ```
 
 ## 利用 conda 安裝套件
+
 ```shell
 $ conda install <package>
 
@@ -103,6 +106,7 @@ $ conda install <package-1> <package-2>
 ```
 
 ## 查看資訊
+
 查看 conda 目前版本
 
 ```shell
@@ -151,6 +155,7 @@ $ pip install --upgrade <package>
 ```
 
 ## 刪除套件
+
 ```shell
 # 刪除環境內的套件
 $ conda remove -n <environment> <package>
@@ -163,6 +168,7 @@ $ conda remove <package-1> <package-2>
 ```
 
 ## 更新套件
+
 ```shell
 # 更新 conda
 $ conda update conda
@@ -178,12 +184,15 @@ $ conda update <package>
 ```
 
 ## 刪除虛擬環境
+
 ```shell
 $ conda env remove -n <environment>
 ```
 
 ## 更新 Python
+
 ### 更新全域環境
+
 若目前 Python 版本是 3.6.1，下面指令只會將 Python 更新至 3.6.x 的最新版本：
 
 ```shell
@@ -197,6 +206,7 @@ $ conda install python=3.6
 ```
 
 ## 更新 Anaconda
+
 更新套件管理器：
 
 ```shell
@@ -220,5 +230,6 @@ $ conda install python==$pythonversion$
 ```
 
 ## 參考連結
+
 - [Managing packages | Conda documentation](https://conda.io/docs/user-guide/tasks/manage-pkgs.html)
 - [macos - How do I upgrade to Python 3.6 with conda? - Stack Overflow](https://stackoverflow.com/questions/41535881/how-do-i-upgrade-to-python-3-6-with-conda)

@@ -3,13 +3,11 @@ title: Windows Subsystem for Linux (WSL)
 date: 2018-11-17 19:00:45
 author: Titangene
 tags:
-  - Linux
   - Ubuntu
-  - Windows 10
   - WSL
 categories:
-  - Windows
   - Linux
+  - Windows
 cover_image: /images/cover/windows-subsystem-for-linux.png
 ---
 
@@ -20,8 +18,8 @@ Windows Subsystem for Linux (簡稱 WSL)，由 Microsoft 與 Canonical 公司合
 <!-- more -->
 
 ## 啟用 Windows Subsystem for Linux
-使用系統管理者權限開啟 PowerShell，並執行下面命令啟用 `Windows Subsystem for Linux
-` 功能：
+
+使用系統管理者權限開啟 PowerShell，並執行下面命令啟用 `Windows Subsystem for Linux` 功能：
 
 ```shell
 $ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -53,11 +51,13 @@ Enable-WindowsOptionalFeature : 要求的作業需要提升的權限。
 ![](../images/windows-subsystem-for-linux/2018-11-17-19-05-10.png)
 
 ## 安裝 Linux 發行版
+
 系統組建 (build) 必須要 Windows build 16215 或更新版本。若要想知道系統組建，可至 Windows 的「設定」內的「關於」即可查看。
 
 ![](../images/windows-subsystem-for-linux/2018-11-17-19-05-23.png)
 
 你可以選擇你想安裝的 Linux 發行版：
+
 - [Ubuntu 16.04 LTS](https://www.microsoft.com/zh-tw/p/ubuntu-1604-lts/9pjn388hp8c9)
 - [Ubuntu 18.04 LTS](https://www.microsoft.com/zh-tw/p/ubuntu-1804-lts/9n9tngvndl3q)
 - [Debian GNU/Linux](https://www.microsoft.com/zh-tw/p/debian-gnu-linux/9msvkqc78pk6)
@@ -98,7 +98,6 @@ Enter new UNIX username:
 
 ![](../images/windows-subsystem-for-linux/2018-11-17-19-06-28.png)
 
-
 ## 在其他終端使用 Bash
 
 如果在使用 CMD 、 PowerShell 或其他終端 (例如我常用的 Cmder) 時想用 bash shell，可使用 `bash` 指令就可以啟動新的 Ubuntu shell：
@@ -114,14 +113,17 @@ $ bash
 ![](../images/windows-subsystem-for-linux/2018-11-17-19-07-01.png)
 
 ## 存取目錄
+
 如果想存取 `D:\project`，在此環境下的路徑就是 `/mnt/d/project`。
 
 ![](../images/windows-subsystem-for-linux/2018-11-17-19-07-14.png)
 
 ## 小結
+
 如果有在跨平台開發或維運的朋友，這個功能應該是一直以來的願望吧？讓你在 Windows 上可以直接處理事情，不用再多開 VM 來使用，不只省資源，也省硬碟空間，重點是不用等 VM 開機...
 
 ## 參考連結
+
 - [Install the Linux Subsystem on Windows 10 | Microsoft Docs](https://docs.microsoft.com/zh-tw/windows/wsl/install-win10)
 - [【WSL】Windows Subsystem for Linux 安裝及基本配置！ | 台灣微軟學生大使](https://blogs.msdn.microsoft.com/microsoft_student_partners_in_taiwan/2017/10/03/wsltune/)
 - [Bash on Ubuntu on Windows 的簡單使用 | Heresy's Space](https://kheresy.wordpress.com/2016/04/12/bash-on-ubuntu-on-windows/)

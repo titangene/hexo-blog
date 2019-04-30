@@ -3,11 +3,10 @@ title: Python 爬蟲常用技巧 (持續更新)
 date: 2019-02-28 17:33:51
 author: Titangene
 tags:
-  - Python
   - Python Requests
-  - Crawler
 categories:
   - Python
+  - Crawler
 cover_image: /images/cover/python_crawler.png
 ---
 
@@ -89,6 +88,7 @@ print(id, sub_code)
 ```
 
 ## 隨機生成 user-agent
+
 ### fake_useragent 套件
 
 ```python
@@ -142,6 +142,7 @@ with open('data.json', 'w', encoding='utf-8') as file:
 ```
 
 ## 讀取/解析 XML
+
 ### 讀取 XML 檔
 
 ```python
@@ -212,8 +213,8 @@ root[0].attrib
 {'ISBN': '10-000000-001'}
 ```
 
-
 ### 搜尋指定元素
+
 使用 `root.iter()`：
 
 ```python
@@ -248,6 +249,7 @@ for book in root.findall('book'):
 ```
 
 ## 下載圖片
+
 `response.raw` 是 file-like 物件，預設不會解壓縮 response (使用 gzip 或 deflate，參考至 [Requests 原始碼](https://github.com/kennethreitz/requests/blob/master/requests/utils.py#L808))，可以透過在 `requests.get()` 方法中，新增參數 `stream=True` 來強制解壓縮，並且可以避免立即將大的 response 內容讀入記憶體內，接著使用 `shutil.copyfileobj()` 讓 Python 將 串流資料轉成檔案物件。
 
 ```python
@@ -267,11 +269,12 @@ with open(file_name, 'wb') as file:
 `shutil.copyfileobj(fsrc, fdst[, length])`：將 file-like 物件 `fsrc` 的內容複製到 file-like 物件 `fdst`。`length` 參數 (int) 是 buffer 的大小。如果 `length` 為負數則代表是複製資料，而不以 chunk 的形式循環原始資料；預設是資料以 chunk 的形式讀取，以避免不受控制的記憶體消耗。請注意，如果 `fsrc` 物件的當前檔案位置不為 0，則只複製從當前檔案位置到檔案末端的內容。
 
 > 參考至 [shutil - High-level file operations - Python 3.7.3 documentation](https://docs.python.org/3/library/shutil.html#shutil.copyfileobj) 官方文件。
-:::
+> :::
 
 > 參考來源：[python - How to download image using requests - Stack Overflow](https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests)
 
 ## 下載大檔案
+
 以迭代的方式取得，預設會以每 128 byte 為一個 chunk 來讀取資料 (參考至 [Requests 原始碼](https://github.com/kennethreitz/requests/blob/master/requests/models.py#L688))：
 
 ```python
@@ -293,7 +296,7 @@ file_name = url.split('/')[-1]
 with requests.get(url, stream=True) as response:
     response.raise_for_status()
     with open(file_name, 'wb') as file:
-        for chunk in response.iter_content(chunk_size=8192): 
+        for chunk in response.iter_content(chunk_size=8192):
             if chunk: # filter out keep-alive new chunks
                 file.write(chunk)
                 # file.flush()
@@ -314,4 +317,4 @@ for line in r.iter_lines():
         print(json.loads(line))
 ```
 
-> 參考來源：[Python Requests庫：HTTP for Humans - 再見紫羅蘭 - 博客園](https://www.cnblogs.com/linxiyue/p/3980003.html)
+> 參考來源：[Python Requests 庫：HTTP for Humans - 再見紫羅蘭 - 博客園](https://www.cnblogs.com/linxiyue/p/3980003.html)

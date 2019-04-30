@@ -5,10 +5,10 @@ author: Titangene
 tags:
   - Docker
   - Container
+categories:
   - SQL Server
   - Linux
   - Database
-categories:
   - DevOps
 cover_image: /images/cover/docker-mssql-server-for-linux.jpg
 ---

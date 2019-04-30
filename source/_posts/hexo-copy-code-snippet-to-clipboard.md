@@ -2,7 +2,7 @@
 title: 在 Hexo 主題內新增程式碼片段複製功能
 date: 2019-02-09 10:40:00
 author: Titangene
-tags: [Hexo, Blog, Code Snippet, Clipboard]
+tags: [Hexo, Code Snippet, Clipboard]
 categories: Blog
 cover_image: /images/cover/hexo-copy-code-snippet-to-clipboard.jpg
 ---
@@ -18,8 +18,8 @@ cover_image: /images/cover/hexo-copy-code-snippet-to-clipboard.jpg
 var clipboard = document.querySelectorAll('pre');
 ```
 
-
 ## 載入 clipboard.js
+
 在 `themes\material-flow\layout\_partial\scripts.ejs` 檔案內的載入 clipboard.js：
 
 ```html
@@ -27,7 +27,9 @@ var clipboard = document.querySelectorAll('pre');
 ```
 
 ## 新增程式碼片段複製功能
+
 每個程式碼片段內都要新增複製功能按鈕，下面說明新增複製按鈕的處理邏輯：
+
 1. 首先要找到所有程式碼區塊：
 
 ```javascript
@@ -48,7 +50,7 @@ var htmlCopyButton = `
 5. 在 `<div>` 標籤上新增 `data-lang` 屬性用於記錄此程式碼區塊內的程式碼是哪種程式語言
 
 ```javascript
-snippets.forEach((snippet) => {
+snippets.forEach(snippet => {
   var parent = snippet.parentNode;
   var wrapper = document.createElement('div');
 
@@ -67,46 +69,46 @@ snippets.forEach((snippet) => {
 
 ```javascript
 var clipboard = new ClipboardJS('.codecopy-btn', {
-  target: (trigger) => {
+  target: trigger => {
     return trigger.nextSibling;
-  }
+  },
 });
 ```
 
 7. 只要按複製按鈕且複製成功，就會顯示 `Copied!` 提示已成功複製程式碼片段：
 
 ```javascript
-clipboard.on('success', (e) => {
+clipboard.on('success', e => {
   e.trigger.setAttribute('aria-label', 'Copied!');
   e.clearSelection();
 });
 ```
 
 8. 將每個複製按鈕新增兩個監聽事件，分別是 `mouseleave` 和 `click`：
-    - `mouseleave`：滑鼠離開按鈕就將提示文字變成 `Copy to clipboard`
-    - `click`：取消事件的預設行為
-
+   - `mouseleave`：滑鼠離開按鈕就將提示文字變成 `Copy to clipboard`
+   - `click`：取消事件的預設行為
 
 ```javascript
 var btns = document.querySelectorAll('.codecopy-btn');
 
-btns.forEach((btn) => {
-  btn.addEventListener('mouseleave', (e) => {
+btns.forEach(btn => {
+  btn.addEventListener('mouseleave', e => {
     e.target.setAttribute('aria-label', 'Copy to clipboard');
     e.target.blur();
   });
 
-  btn.addEventListener('click', (e) => {
-    e.preventDefault()
+  btn.addEventListener('click', e => {
+    e.preventDefault();
   });
 });
 ```
 
 ### 完整程式碼
+
 在 `themes\material-flow\source\js` 目錄內建立 `clipboard-use.js`，檔案內容如下：
 
 ```javascript
-$(function () {
+$(function() {
   // ref: https://github.com/zenorocha/codecopy/blob/master/src/scripts/main.js
   var snippets = document.querySelectorAll('figure.highlight');
   var htmlCopyButton = `
@@ -114,7 +116,7 @@ $(function () {
       <i class="far fa-copy" aria-hidden="true"></i>
     </button>`;
 
-  snippets.forEach((snippet) => {
+  snippets.forEach(snippet => {
     var parent = snippet.parentNode;
     var wrapper = document.createElement('div');
 
@@ -130,12 +132,12 @@ $(function () {
 
   // Add copy to clipboard functionality and user feedback
   var clipboard = new ClipboardJS('.codecopy-btn', {
-    target: (trigger) => {
+    target: trigger => {
       return trigger.nextSibling;
-    }
+    },
   });
 
-  clipboard.on('success', (e) => {
+  clipboard.on('success', e => {
     e.trigger.setAttribute('aria-label', 'Copied!');
     e.clearSelection();
   });
@@ -144,14 +146,14 @@ $(function () {
   // and prevent page refresh after click button
   var btns = document.querySelectorAll('.codecopy-btn');
 
-  btns.forEach((btn) => {
-    btn.addEventListener('mouseleave', (e) => {
+  btns.forEach(btn => {
+    btn.addEventListener('mouseleave', e => {
       e.target.setAttribute('aria-label', 'Copy to clipboard');
       e.target.blur();
     });
 
-    btn.addEventListener('click', (e) => {
-      e.preventDefault()
+    btn.addEventListener('click', e => {
+      e.preventDefault();
     });
   });
 });
@@ -164,7 +166,9 @@ $(function () {
 ```
 
 ## CSS 樣式
+
 ### 提示文字樣式
+
 在 `themes\material-flow\source\less` 目錄內建立 `_tooltipped.less`，檔案內容如下：
 
 ```less
@@ -178,7 +182,7 @@ $(function () {
   position: absolute;
   z-index: 1000000;
   display: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   -webkit-font-smoothing: subpixel-antialiased;
   color: #fff;
   text-align: center;
@@ -204,7 +208,7 @@ $(function () {
   height: 0;
   color: #616161;
   pointer-events: none;
-  content: "";
+  content: '';
   border: 6px solid transparent;
   opacity: 0;
 }
@@ -229,7 +233,7 @@ $(function () {
     display: inline-block;
     text-decoration: none;
     animation-name: tooltip-appear;
-    animation-duration: .1s;
+    animation-duration: 0.1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
   }
@@ -266,10 +270,11 @@ $(function () {
 接著在 `themes\material-flow\source\style.less` 檔案內的載入 `_tooltipped.less`：
 
 ```less
-@import "less/_tooltipped.less";
+@import 'less/_tooltipped.less';
 ```
 
 ### 其他樣式
+
 可參考本站的完整樣式：[原始碼](https://github.com/titangene/hexo-blog/blob/master/themes/material-flow/source/less/_article.less)
 
 ```less
@@ -286,7 +291,7 @@ figure {
 
   &::before {
     content: attr(data-lang);
-    font-family: "Roboto Mono", Consolas, monospace, sans-serif;
+    font-family: 'Roboto Mono', Consolas, monospace, sans-serif;
     font-size: 0.6em;
     color: #b1b1b1;
     line-height: 18px;
@@ -318,6 +323,7 @@ figure {
 ```
 
 ## Demo
+
 下面是原本的 HTML：
 
 ```html
@@ -362,6 +368,7 @@ figure {
 ![](../images/hexo-copy-code-snippet-to-clipboard/copy-to-clipboard.gif)
 
 ## 參考連結
+
 - [clipboard.js — Copy to clipboard without Flash](https://clipboardjs.com/)
 - [GitHub's Primer Tooltips](https://github.com/primer/primer/tree/master/modules/primer-tooltips)
 - [zenorocha/codecopy: A browser extension that adds copy to clipboard buttons on every code block](https://github.com/zenorocha/codecopy)

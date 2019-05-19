@@ -88,3 +88,34 @@ HackMD 是我常用的寫作平台，因官方沒有提供暗主題的瀏覽模�
 
 ## 小結
 其實這個 side project 我在 2017 年 8 月就開始做了，期間做了一些不定期的更新，這次的更新算是所有我發現想改的部分 (洞) 都填好了 (有可能我眼殘沒發現的部分也需要改 XD，歡迎大家發 PR 給我)，包括最近 HackMD 官方推出的可分享文件給指定帳號的功能，我也把介面變成暗主題了。
+
+## 套用暗主題的其他秘訣
+在 HackMD 擔任 Developer 的 [黃鈺凱](https://www.facebook.com/yukaihuangtw) 在我發文的 Facebook 社團 [Markdown 台灣](https://www.facebook.com/groups/markdown.tw/permalink/1535146039952824/)，跟大家分享另一種可以套用暗主題的小秘訣，而且這個方法可以將你自定的樣式，套用至你分享的筆記，或是跟夥伴參與的共筆，讓大家都能共享同樣的暗主題。
+
+這個祕訣就是在筆記內，加上 HackMD 的內嵌筆記語法，例如：
+
+```
+{%hackmd BJrTq20hE %}
+```
+
+以 https://hackmd.io/IpJEFpXkQg2yvdsY9IbTVg?both (這個連結是由 [黃鈺凱](https://www.facebook.com/yukaihuangtw) 大大提供) 這個筆記為例，在這個筆記內可以看到 HackMD 的內嵌筆記語法，而且可以看到我沒有在 Stylus 開啟我自定的  [HackMD dark theme](https://userstyles.org/styles/147272/hackmd-dark-theme)，竟然還可以保有暗主題的樣式：
+
+![](../images/hackmd-dark-theme/2019-05-19-23-38-41.png)
+
+原因就發生在這個 HackMD 的內嵌筆記語法，因為這個語法背後幫你多加了暗主題的樣式。那是怎麼做到的呢？於是我就從 `BJrTq20hE` 這個看似奇怪亂碼的東西下手。
+
+馬上就直覺想到，其實 `BJrTq20hE` 是另一篇筆記的編號，這個筆記的完整連結像是下面這樣，網址其中的 `s` 是 HackMD 的發表模式 (應該是叫這樣吧？)：
+
+```
+https://hackmd.io/s/BJrTq20hE
+```
+
+進入這個連結後，可以看到整個筆記畫面沒有任何文字內容，但是一樣在沒有套用自訂暗主題的情況下，還能有暗主題的樣式。
+
+![](../images/hackmd-dark-theme/2019-05-19-23-46-11.png)
+
+接著我進入這個筆記的編輯模式就發現答案已揭曉，原來這個看似沒內文的筆記中，有我寫的暗主題樣式，這些樣式直接被寫在這篇 HackMD 的筆記裡面，並且放在 `<style>` 的 HTML element 內：
+
+![](../images/hackmd-dark-theme/2019-05-19-23-48-02.png)
+
+也就是說如果未來想在其他筆記也套用相同的主題樣式，只要建立專門放樣式的筆記，然後將這個筆記透過 HackMD 的內嵌筆記語法套用至其他筆記上，這樣那些筆記都會共享相同的樣式囉！好神奇啊！感謝 HackMD Developer 大大的分享！

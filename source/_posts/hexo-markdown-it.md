@@ -110,8 +110,8 @@ $ npm i markdown-it-abbr markdown-it-checkbox markdown-it-container markdown-it-
 有使用過 HackMD 的朋友都知道，只要在 HackMD 輸入下列 Markdown 語法：
 
 ```markdown
-[ ] task 1
-[x] task 2
+- [ ] task 1
+- [x] task 2
 ```
 
 就會被轉換成 HTML 的 checkbox：

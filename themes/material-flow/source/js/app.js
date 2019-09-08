@@ -114,12 +114,6 @@ var customSearch;
 			e.stopPropagation();
 		})
 	}
-	function setScrollReveal() {
-		const $reveal = $('.reveal');
-		if ($reveal.length === 0) return;
-		const sr = ScrollReveal();
-		sr.reveal('.reveal', { duration: 300 });
-	}
 	function setTocToggle() {
 		const $toc = $('.toc-wrapper');
 		if ($toc.length === 0) return;
@@ -171,7 +165,6 @@ var customSearch;
 		setHeaderMenu();
 		setHeaderMenuPhone();
 		setHeaderSearch();
-		setScrollReveal();
 		setTocToggle();
 
 		$(".article .video-container").fitVids();

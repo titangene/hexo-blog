@@ -1,0 +1,7 @@
+*.md text=auto
+*.yml text=auto
+*.ejs text=auto
+*.js text=auto
+*.json text=auto
+*.less text=auto
+yarn.lock text=auto

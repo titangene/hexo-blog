@@ -18,7 +18,7 @@ js_minifier:
   enable: true
 
 js_concator:
-  enable: true
+  # enable: true
 
 image_minifier:
   enable: true

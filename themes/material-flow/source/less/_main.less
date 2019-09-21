@@ -46,7 +46,7 @@
 
   .mobile-post() {
     .post {
-      padding: 1.5 * @gap @gap;
+      padding: 1.5 * @gap 1.5 * @gap;
 
       .meta {
         margin-bottom: @gap;
@@ -97,7 +97,7 @@
   .post {
     position: relative;
     margin: 0 auto;
-    padding: 2 * @gap 1.5*@gap;
+    padding: 2 * @gap 2.5*@gap;
     //max-width: 768px;
     background: white;
     &:extend(.z-depth-1);
@@ -168,5 +168,11 @@
   @media(max-width:@on-phone) {
     padding-right: 0;
     .mobile-post();
+  }
+
+  @media(max-width:@on-phone-L) {
+    .post {
+      padding: 1.5 * @gap 1 * @gap;
+    }
   }
 }

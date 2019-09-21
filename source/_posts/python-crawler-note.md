@@ -269,7 +269,7 @@ with open(file_name, 'wb') as file:
 `shutil.copyfileobj(fsrc, fdst[, length])`：將 file-like 物件 `fsrc` 的內容複製到 file-like 物件 `fdst`。`length` 參數 (int) 是 buffer 的大小。如果 `length` 為負數則代表是複製資料，而不以 chunk 的形式循環原始資料；預設是資料以 chunk 的形式讀取，以避免不受控制的記憶體消耗。請注意，如果 `fsrc` 物件的當前檔案位置不為 0，則只複製從當前檔案位置到檔案末端的內容。
 
 > 參考至 [shutil - High-level file operations - Python 3.7.3 documentation](https://docs.python.org/3/library/shutil.html#shutil.copyfileobj) 官方文件。
-> :::
+:::
 
 > 參考來源：[python - How to download image using requests - Stack Overflow](https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests)
 

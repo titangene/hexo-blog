@@ -1,5 +1,5 @@
 ---
-title: 重新認識 CSS - CSS Selector (2)
+title: 重新認識 CSS - Attribute selector (屬性選擇器)
 date: 2019-09-18 16:20:52
 author: Titangene
 tags:
@@ -21,7 +21,7 @@ Selector (選擇器) 可用來選擇 HTML 和 XML 文件中的節點，並將樣
 > 
 > 在這 30 天的內容中，會將 Spec 內看到的資料整理成這個系列，也希望正在學 CSS 的各位可以更加了解它。另外我也會同時將文章發至我的 Blog，如果想直接看文內的程式碼 Demo 畫面，可以到我的 Blog 來看 😃。
 >
-> 本文同步發表於 iT 邦幫忙：[重新認識 CSS - CSS Selector (2)](https://ithelp.ithome.com.tw/articles/10217082)
+> 本文同步發表於 iT 邦幫忙：[重新認識 CSS - Attribute selector (屬性選擇器)](https://ithelp.ithome.com.tw/articles/10217082)
 > 
 > 「重新認識 CSS」系列文章發文於：
 > - [iT 邦幫忙](https://ithelp.ithome.com.tw/users/20117586/ironman/2617)
@@ -88,7 +88,7 @@ h1[class="alert"], h1[class="alert-primary"] { color: gray; }
 
 Demo：[Codepen 連結](https://codepen.io/titangene/pen/MWgPyyG)
 
-![](../images/css-selector-2/attribute-presence-and-value-selector.png)
+![](../images/css-attribute-selector/attribute-presence-and-value-selector.png)
 
 <iframe height="590" style="width: 100%;" scrolling="no" title="Attribute presence and value selectors" src="https://codepen.io/titangene/embed/MWgPyyG/?height=590&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/titangene/pen/MWgPyyG/'>Attribute presence and value selectors</a> by Titangene
@@ -109,7 +109,7 @@ Demo：[Codepen 連結](https://codepen.io/titangene/pen/MWgPyyG)
 <h2 class="textPrimary">Text</h2>
 <h2 class="text-primary">Text</h2>
 
-<h2><a href="https://titangene.github.io/article/css-selector-2.html">重新認識 CSS - CSS Selector (2)</a></h2>
+<h2><a href="https://titangene.github.io/article/css-attribute-selector.html">重新認識 CSS - CSS Selector (2)</a></h2>
 <h2><a href="https://titangene.github.io">Titangene Blog</a></h2>
 
 <h2 class="my-alert">Text</h2>
@@ -129,7 +129,7 @@ h2[class*="alert"] { color: green; }
 
 Demo：[Codepen 連結](https://codepen.io/titangene/pen/vYBVKEm)
 
-![](../images/css-selector-2/substring-matching-attribute-selector.png)
+![](../images/css-attribute-selector/substring-matching-attribute-selector.png)
 
 <iframe height="383" style="width: 100%;" scrolling="no" title="Substring matching attribute selectors" src="https://codepen.io/titangene/embed/vYBVKEm/?height=383&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/titangene/pen/vYBVKEm/'>Substring matching attribute selectors</a> by Titangene

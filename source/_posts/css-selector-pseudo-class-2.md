@@ -1,5 +1,5 @@
 ---
-title: 重新認識 CSS - CSS Selector (4)
+title: 重新認識 CSS - Pseudo-class (偽類) (2)
 date: 2019-09-20 16:20:52
 author: Titangene
 tags:
@@ -21,7 +21,7 @@ Selector (選擇器) 可用來選擇 HTML 和 XML 文件中的節點，並將樣
 > 
 > 在這 30 天的內容中，會將 Spec 內看到的資料整理成這個系列，也希望正在學 CSS 的各位可以更加了解它。另外我也會同時將文章發至我的 Blog，如果想直接看文內的程式碼 Demo 畫面，可以到我的 Blog 來看 😃。
 >
-> 本文同步發表於 iT 邦幫忙：[重新認識 CSS - CSS Selector (4)](https://ithelp.ithome.com.tw/articles/10218197)
+> 本文同步發表於 iT 邦幫忙：[重新認識 CSS - Pseudo-class (偽類) (2)](https://ithelp.ithome.com.tw/articles/10218197)
 > 
 > 「重新認識 CSS」系列文章發文於：
 > - [iT 邦幫忙](https://ithelp.ithome.com.tw/users/20117586/ironman/2617)
@@ -150,7 +150,9 @@ li:nth-child(odd) {
 
 而巢狀 `<ul class="nested-list">` 元素裡面只有五個 `li` 元素，沒有其他 type 的元素，所以都會選到奇數的 sibling 元素 (因為沒有亂路的元素)。
 
-![](../images/css-selector-4/2019-09-20-16-37-11.png)
+Demo：[Codepen 連結](https://codepen.io/titangene/pen/NWKEwmo)
+
+![](../images/css-selector-pseudo-class-2/2019-09-20-16-37-11.png)
 
 <iframe height="541" style="width: 100%;" scrolling="no" title=":nth-child &amp; :nth-of-type" src="https://codepen.io/titangene/embed/NWKEwmo/?height=541&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/titangene/pen/NWKEwmo/'>:nth-child &amp; :nth-of-type</a> by Titangene
@@ -177,7 +179,7 @@ li:nth-child(odd) {
 button:not([disable])
 ```
 
-> 註：`[disable]` 是 attribute selector，詳情請參閱我前幾天寫的「[重新認識 CSS - CSS Selector (2)](https://titangene.github.io/article/css-selector-2.html)」。
+> 註：`[disable]` 是 attribute selector，詳情請參閱我前幾天寫的「[重新認識 CSS - Attribute selector (屬性選擇器)](https://titangene.github.io/article/css-attribute-selector.html)」。
 
 match 除了 `#titan` 元素之外的所有元素：
 
@@ -185,7 +187,7 @@ match 除了 `#titan` 元素之外的所有元素：
 *:not(#titan)
 ```
 
-> 註：`#titan` 是 ID selector，詳情請參閱我前幾天寫的「[重新認識 CSS - CSS Selector (1)](https://titangene.github.io/article/css-selector-1.html)」。
+> 註：`#titan` 是 ID selector，詳情請參閱我前幾天寫的「[重新認識 CSS - CSS Selector (前傳)](https://titangene.github.io/article/css-selector-1.html)」。
 
 ## 最後
 

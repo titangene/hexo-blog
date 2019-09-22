@@ -1,5 +1,5 @@
 ---
-title: 重新認識 CSS - CSS Selector (3)
+title: 重新認識 CSS - Pseudo-class (偽類) (1)
 date: 2019-09-19 16:20:52
 author: Titangene
 tags:
@@ -21,7 +21,7 @@ Selector (選擇器) 可用來選擇 HTML 和 XML 文件中的節點，並將樣
 > 
 > 在這 30 天的內容中，會將 Spec 內看到的資料整理成這個系列，也希望正在學 CSS 的各位可以更加了解它。另外我也會同時將文章發至我的 Blog，如果想直接看文內的程式碼 Demo 畫面，可以到我的 Blog 來看 😃。
 >
-> 本文同步發表於 iT 邦幫忙：[重新認識 CSS - CSS Selector (3)](https://ithelp.ithome.com.tw/articles/10217730)
+> 本文同步發表於 iT 邦幫忙：[重新認識 CSS - Pseudo-class (偽類) (1)](https://ithelp.ithome.com.tw/articles/10217730)
 > 
 > 「重新認識 CSS」系列文章發文於：
 > - [iT 邦幫忙](https://ithelp.ithome.com.tw/users/20117586/ironman/2617)
@@ -55,7 +55,7 @@ Dynamic pseudo-classes 又分為：
 
 ```html
 <h3><a href="https://titangene.github.io">Titangene Blog</a></h3>
-<h3><a href="https://titangene.github.io/article/css-selector-3.html">重新認識 CSS - CSS Selector (3)</a></h3>
+<h3><a href="https://titangene.github.io/article/css-selector-pseudo-class-1.html">重新認識 CSS - CSS Selector (3)</a></h3>
 ```
 
 ```css
@@ -65,7 +65,7 @@ a:link { color: green; }
 
 Demo：[Codepen 連結](https://codepen.io/titangene/pen/jONejbv)
 
-![](../images/css-selector-3/2019-09-19-16-40-27.png)
+![](../images/css-selector-pseudo-class-1/2019-09-19-16-40-27.png)
 
 <iframe height="215" style="width: 100%;" scrolling="no" title="link pseudo-class: :visited &amp; :link" src="https://codepen.io/titangene/embed/jONejbv/?height=215&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/titangene/pen/jONejbv/'>link pseudo-class: :visited &amp; :link</a> by Titangene
@@ -85,7 +85,7 @@ Demo：[Codepen 連結](https://codepen.io/titangene/pen/jONejbv)
 
 ```html
 <h3><a href="https://titangene.github.io">Titangene Blog</a></h3>
-<h3><a href="https://titangene.github.io/article/css-selector-3.html">重新認識 CSS - CSS Selector (3)</a></h3>
+<h3><a href="https://titangene.github.io/article/css-selector-pseudo-class-1.html">重新認識 CSS - CSS Selector (3)</a></h3>
 ```
 
 ```css
@@ -97,7 +97,7 @@ a:active { color: purple; }
 
 Demo：[Codepen 連結](https://codepen.io/titangene/pen/YzKJobe)
 
-![](../images/css-selector-3/user-action-pseudo-class.gif)
+![](../images/css-selector-pseudo-class-1/user-action-pseudo-class.gif)
 
 <iframe height="227" style="width: 100%;" scrolling="no" title="user action pseudo-class" src="https://codepen.io/titangene/embed/YzKJobe/?height=227&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/titangene/pen/YzKJobe/'>user action pseudo-class</a> by Titangene
@@ -140,11 +140,11 @@ https://s.codepen.io/titangene/debug/jONegME/vWkRwRNmBvOM
 
 在還沒點擊 `#hello` 錨點時，畫面如下：
 
-![](../images/css-selector-3/2019-09-19-18-59-06.png)
+![](../images/css-selector-pseudo-class-1/2019-09-19-18-59-06.png)
 
 只要點擊 `#hello` 錨點後，下面的 "Target" 文字就會變成紅色 (也就是會應用 `#hello:target` 的樣式)，畫面如下：
 
-![](../images/css-selector-3/2019-09-19-18-59-29.png)
+![](../images/css-selector-pseudo-class-1/2019-09-19-18-59-29.png)
 
 並且 URL 的最後會加上 `#hello`，而 `#hello` 就是 fragment identifier。
 
@@ -157,7 +157,7 @@ https://s.codepen.io/titangene/debug/jONegME/vWkRwRNmBvOM
 
 在 [MDN](https://developer.mozilla.org/zh-TW/docs/Web/CSS/:target#Creating_a_pure_CSS_lightbox) 有一個範例也蠻有趣的，可以用 `:target` pseudo-class 來實作 lightbox：
 
-![](../images/css-selector-3/lightbox.gif)
+![](../images/css-selector-pseudo-class-1/lightbox.gif)
 
 運作原理是用 `display: none` 和 `display: block` 來控制 lightbox 是否開啟，觸發的機制就是用剛剛介紹的 `:target` pseudo-class 來做的。
 
@@ -201,7 +201,7 @@ Demo：[Codepen 連結](https://codepen.io/titangene/pen/qBWQBEd)
 
 只要被加上 `disabled` 屬性的 `input` 元素都代表該元素處於禁用狀態，所以這些元素就會套用 `input:disabled` 此 selector 的樣式。其餘的元素則會套用 `input:enabled` 此 selector 的樣式。
 
-![](../images/css-selector-3/2019-09-19-19-37-25.png)
+![](../images/css-selector-pseudo-class-1/2019-09-19-19-37-25.png)
 
 :::info
 不過要注意的事元素有無啟用，跟一些會影響使用者互動 UI 元素的 CSS 屬性沒關係，這些都不會影響 selector 是否 match 到 `:enabled` 或 `:disabled`。
@@ -240,7 +240,7 @@ input:checked + label { color: blue; }
 
 Demo：[Codepen 連結](https://codepen.io/titangene/pen/vYBQYrW)
 
-![](../images/css-selector-3/2019-09-19-20-02-40.png)
+![](../images/css-selector-pseudo-class-1/2019-09-19-20-02-40.png)
 
 <iframe height="280" style="width: 100%;" scrolling="no" title=":checked pseudo-class" src="https://codepen.io/titangene/embed/vYBQYrW/?height=280&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/titangene/pen/vYBQYrW/'>:checked pseudo-class</a> by Titangene

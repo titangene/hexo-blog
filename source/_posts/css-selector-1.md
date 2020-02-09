@@ -1,5 +1,5 @@
 ---
-title: 重新認識 CSS - CSS Selector (前傳)
+title: 重新認識 CSS - Simple Selector & Groups of selector
 date: 2019-09-17 18:20:52
 author: Titangene
 tags:
@@ -21,7 +21,7 @@ Selector (選擇器) 可用來選擇 HTML 和 XML 文件中的節點，並將樣
 > 
 > 在這 30 天的內容中，會將 Spec 內看到的資料整理成這個系列，也希望正在學 CSS 的各位可以更加了解它。另外我也會同時將文章發至我的 Blog，如果想直接看文內的程式碼 Demo 畫面，可以到我的 Blog 來看 😃。
 >
-> 本文同步發表於 iT 邦幫忙：[重新認識 CSS - CSS Selector (前傳)](https://ithelp.ithome.com.tw/articles/10216566)
+> 本文同步發表於 iT 邦幫忙：[重新認識 CSS - Simple Selector & Groups of selector](https://ithelp.ithome.com.tw/articles/10216566)
 > 
 > 「重新認識 CSS」系列文章發文於：
 > - [iT 邦幫忙](https://ithelp.ithome.com.tw/users/20117586/ironman/2617)
@@ -29,9 +29,9 @@ Selector (選擇器) 可用來選擇 HTML 和 XML 文件中的節點，並將樣
 
 ## Selector 語法
 
-Selector 是由一個或多個 simple selector (簡單選擇器) 序列組合，並用 combinator 分隔的一串東西。
+Selector 是由一個或多個 sequence of simple selector (簡單選擇器) 所組合，並用 combinator 分隔的一串東西。
 
-simple selector 序列：
+sequence of simple selectors：
 - 由多個 simple selector 組成，沒有被 combinator 分隔
 - 以 type selector 或 universal selector 為開頭
 
@@ -60,6 +60,14 @@ E>F
 ```
 
 不過，通常在之間都會加空白，因為可讀性較佳。
+
+所有 CSS 語法在 ASCII 範圍內都不分大小寫 (也就是 `[a-z]` 等於 `[A-Z]` )，但不受 CSS 控制的部分除外。例如：HTML 的 `id` 和 `class` 屬性值、字體名稱和 URI 是否分大小寫都超出 CSS Spec 的定義範圍。另外，HTML 的元素名稱是不分大小寫的，但在 XML 就有分大小寫。
+
+雖然在 [CSS 2.2 spec](https://www.w3.org/TR/CSS22/selector.html#pseudo-elements) 是說 pseudo-element 和 pseudo-class 的名稱不分大小寫，但通常會使用小寫。
+
+在 CSS 中，identifier (包括 selector 中的元素名稱、class 和 ID) 只能包含字元 `[a-zA-Z0-9]` 和 ISO 10646 字元中的 U+0080 及之後的字元，以及 hyphen ( `-` ) 和底線 ( `_` )；它們不能以數字、兩個 hyphen 或 hyphen 後面接著數字為開頭。
+
+> 詳情可參閱 [CSS 2.2 - 4.1.3. Characters and case](https://www.w3.org/TR/CSS22/syndata.html#characters)。
 
 ## Groups of selector
 
@@ -141,7 +149,9 @@ Demo：[Codepen 連結](https://codepen.io/titangene/pen/gOYdxQP)
 
 ### Type selector
 
-選到 HTML tag 名稱的元素，例如：match 所有 h1 元素：
+與 HTML 的 element type 的名稱 (也就是 HTML tag 名稱) match。
+
+例如：match 所有 `h1` 元素：
 
 ```html
 <h1>header 1</h1>
@@ -162,7 +172,7 @@ Demo：[Codepen 連結](https://codepen.io/titangene/pen/JjPaMpm)
 
 ### Universal Selector
 
-Universal selector 是使用 `*` 來 match 任何元素。
+Universal selector 是使用 `*` 來 match 任何 element type 的名稱。
 
 例如：下面範例可以選到所有元素：
 
@@ -313,11 +323,18 @@ Demo：[Codepen 連結](https://codepen.io/titangene/pen/KKPxZma)
   (<a href='https://codepen.io/titangene'>@titangene</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+### Pseudo-class
+
+> pseudo-class 會在之後的兩篇中介紹到：
+> - [重新認識 CSS - Pseudo-class (偽類) (1)](https://ithelp.ithome.com.tw/articles/10217730)
+> - [重新認識 CSS - Pseudo-class (偽類) (2)](https://ithelp.ithome.com.tw/articles/10218197)
+
 ## 最後
 
 今天介紹一些 simple selector，接下來幾天會接續介紹其他 selector。
 
 資料來源：
-- [CSS 2.2 Specification - Selectors](https://www.w3.org/TR/CSS22/selector.html)
+- [CSS 2.2 - 5. Selectors](https://www.w3.org/TR/CSS22/selector.html)
+- [CSS 2.2 - 4.1.3. Characters and case](https://www.w3.org/TR/CSS22/syndata.html#characters)
 - [Selectors Level 3](https://www.w3.org/TR/selectors-3/)
 - [Selectors Level 4](https://www.w3.org/TR/selectors-4/)

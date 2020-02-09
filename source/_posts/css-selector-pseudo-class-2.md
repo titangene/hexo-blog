@@ -27,6 +27,25 @@ Selector (選擇器) 可用來選擇 HTML 和 XML 文件中的節點，並將樣
 > - [iT 邦幫忙](https://ithelp.ithome.com.tw/users/20117586/ironman/2617)
 > - [Titangene Blog](https://titangene.github.io/tags/it-%E9%90%B5%E4%BA%BA%E8%B3%BD/)
 
+之前有提到以下這些都是 simple selector：
+- type selector
+- universal selector
+- attribute selector
+- class selector
+- ID selector
+- pseudo-class
+
+> 本篇會介紹 pseudo-class，如果想了解其他 simple selector 可參閱之前介紹的 [重新認識 CSS - Simple Selector & Groups of selector](https://ithelp.ithome.com.tw/articles/10216566)。
+
+如之前所說，pseudo-class 是以 `:` 為開頭，後面接著 pseudo-class 的名稱，有些會在後面加上括號 `()`，並在括號之間加上值。例如：`:nth-child(2)`。
+
+:::warning
+注意：
+- pseudo-class 和 pseudo-element 不相同
+- pseudo-class 是以 `:` 為開頭
+- pseudo-element 是以 `::` 為開頭，但也可以以 `:` 為開頭，因為在舊版的 W3C Spec 中沒有將 pseudo-class 和 pseudo-element 區分成 `:` 和 `::`。如果你寫 pseudo-element 是用 `:`，大部份瀏覽器也還是會支援這種語法。
+:::
+
 ## Structural pseudo-classes
 
 當使用 structural pseudo-class 時，它會計算各 sibling 元素的位置：
@@ -187,7 +206,7 @@ match 除了 `#titan` 元素之外的所有元素：
 *:not(#titan)
 ```
 
-> 註：`#titan` 是 ID selector，詳情請參閱我前幾天寫的「[重新認識 CSS - CSS Selector (前傳)](https://titangene.github.io/article/css-selector-1.html)」。
+> 註：`#titan` 是 ID selector，詳情請參閱我前幾天寫的「[重新認識 CSS - Simple Selector & Groups of selector](https://titangene.github.io/article/css-selector-1.html)」。
 
 ## 最後
 

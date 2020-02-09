@@ -95,6 +95,19 @@ Demo：[Codepen 連結](https://codepen.io/titangene/pen/QWLzNjE)
   (<a href='https://codepen.io/titangene'>@titangene</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+#### `content` 字串換行
+
+如果想在 `content` 屬性內將字串換行要怎麼做？只要在字串中加入 `\A` 這個 escape sequence (轉義序列)，它就會在 generated content 中包含 newline，而這個插入的 line break 也會受到 [`white-space`](https://www.w3.org/TR/CSS22/text.html#propdef-white-space) 屬性的影響。有關 `\A` escape sequence 的詳情可參 CSS 2 的 [字串](https://www.w3.org/TR/CSS22/syndata.html#strings) 和 [字元與大小寫](https://www.w3.org/TR/CSS2/syndata.html#escaped-characters) 部份。
+
+```css
+h2:before {
+  display: block;
+  text-align: center;
+  white-space: pre;
+  content: "Hello\A Titan"
+}
+```
+
 ## 最後
 
 今天介紹一些 `::before` 和 `::after` 這兩個 pseudo-element，接下來幾天會接續介紹其他 selector。
@@ -105,4 +118,4 @@ Demo：[Codepen 連結](https://codepen.io/titangene/pen/QWLzNjE)
 - [Selectors Level 4](https://www.w3.org/TR/selectors-4/)
 - [CSS Pseudo-Elements Module Level 4](https://www.w3.org/TR/css-pseudo-4/)
 - [CSS Generated Content Module Level 3](https://www.w3.org/TR/css-content-3/#propdef-content)
-- [CSS Cascading and Inheritance Level 4](https://www.w3.org/TR/css-cascade/)
+- [CSS Cascading and Inheritance Level 4](https://www.w3.org/TR/css-cascade-4/)

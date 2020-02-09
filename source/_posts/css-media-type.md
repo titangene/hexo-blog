@@ -95,7 +95,7 @@ cover_image: /images/cover/css.png
 - `speech`：適用於語音合成器 (speech synthesizer)、語音朗讀裝置
 - `print`：適用於 paged material 和在列印預覽模式下在螢幕上查看的文件，例如：用瀏覽器的「列印預覽」模式察看文件 (如下圖)
 
-![](../images/2019-09-27-08-06-25.png)
+![](../images/css-media-type/2019-09-27-08-06-25.png)
 
 > `print` 的 paged media 部份可參閱 [CSS 2.2 - paged media](https://www.w3.org/TR/CSS22/page.html)。
 

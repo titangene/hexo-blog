@@ -9,7 +9,7 @@
     "hexo-g": "hexo clean && hexo generate --config _config.yml,_config.release.yml"
   },
   "hexo": {
-    "version": "3.8.0"
+    "version": "3.9.0"
   },
   "dependencies": {
     "hexo": "^3.8.0",

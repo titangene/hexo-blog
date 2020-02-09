@@ -74,7 +74,8 @@ if (opt.plugins) {
     "markdown-it-mathjax": "^2.0.0",
     "markdown-it-regexp": "^0.4.0",
     "markdown-it-sub": "^1.0.0",
-    "markdown-it-sup": "^1.0.0"
+    "markdown-it-sup": "^1.0.0",
+    "markdown-it-task-checkbox": "^1.0.6",
     // ...
   }
 }
@@ -96,7 +97,18 @@ if (opt.plugins) {
 - [markdown-it-task-checkbox](https://github.com/linsir/markdown-it-task-checkbox)
 
 ```shell
-$ npm i markdown-it-abbr markdown-it-checkbox markdown-it-container markdown-it-deflist markdown-it-emoji markdown-it-footnote markdown-it-imsize markdown-it-ins markdown-it-mark markdown-it-regexp markdown-it-sub markdown-it-sup --save
+$ npm i markdown-it-abbr \
+        markdown-it-task-checkbox \
+        markdown-it-container \
+        markdown-it-deflist \
+        markdown-it-emoji \
+        markdown-it-footnote \
+        markdown-it-imsize \
+        markdown-it-ins \
+        markdown-it-mark \
+        markdown-it-regexp \
+        markdown-it-sub \
+        markdown-it-sup --save
 ```
 
 ### markdown-it-mathjax

@@ -37,8 +37,8 @@ Selector 允許表示元素的屬性。當 selector 作為 expression (表達式
 - `[att]`：代表具有 `att` 屬性的元素，無論屬性的值為何
 - `[att=val]`：代表具有 `att` 屬性的元素，且該屬性值為 `val`
 - `[att~=val]`：代表具有 `att` 屬性的元素，該屬性的值是以空格分隔的單詞列表，其中一個正好是 `val`
-  - 如果 `val` 包含空格，就不代表任何內容 (因為單字之間是用空格來分隔)
-  - 如果 `val` 是空字串，就不代表任何內容
+  - 如果 `val` 包含空格，就不會 match 任何內容 (因為單字之間是用空格來分隔)
+  - 如果 `val` 是空字串，就不會 match 任何內容
 - `[att|=val]`：代表具有 `att` 屬性的元素，且該屬性值為 `val` 或以 `val` 為開頭，後面接著 `-` (也就是以 `val-` 為開頭)
 
 直接看範例：
@@ -95,12 +95,42 @@ Demo：[Codepen 連結](https://codepen.io/titangene/pen/MWgPyyG)
   (<a href='https://codepen.io/titangene'>@titangene</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+如上述所說，`[att~=val]` 有以下兩項語法規則，下面會分別以範例來說明：
+- 如果 `val` 包含空格，就不會 match 任何內容 (因為單字之間是用空格來分隔)
+- 如果 `val` 是空字串，就不會 match 任何內容
+
+```html
+<h1 class="text text-primary text-bold">Text</h1>
+<h1 class="text-primary text">Text</h1>
+<h1 class="text">Text</h1>
+```
+
+```css
+h1[class~="text"] { color: olive; }
+
+/* 以下 selector 都不會 match 任何內容 */
+h1[class~="text "] { color: red; }
+h1[class~=" text"] { color: green; }
+h1[class~=" text "] { color: blue; }
+h1[class~=" "] { color: purple; }
+h1[class~=""] { color: gray; }
+```
+
+Demo：[Codepen 連結](https://codepen.io/titangene/pen/qBBbxJp)
+
+![](../images/css-attribute-selector/attribute-presence-and-value-selector-2.png)
+
+<iframe height="396" style="width: 100%;" scrolling="no" title="Attribute presence and value selectors：[att~=val]" src="https://codepen.io/titangene/embed/qBBbxJp?height=396&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/titangene/pen/qBBbxJp'>Attribute presence and value selectors：[att~=val]</a> by Titangene
+  (<a href='https://codepen.io/titangene'>@titangene</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
 ### Substring matching attribute selector
 
 在 [Selectors Level 3](https://www.w3.org/TR/selectors-3/#attribute-substrings) 提供了三個額外的 attribute selector，用於 match 屬性值中的子字串：
-- `[att^=val]`：代表具有 `att` 屬性的元素，該屬性值以 `val` 為開頭。如果 `val` 是空字串，則 selector 不代表任何內容
-- `[att$=val]`：代表具有 `att` 屬性的元素，該屬性值以 `val` 為結尾。如果 `val` 是空字串，則 selector 不代表任何內容
-- `[att*=val]`：代表具有 `att` 屬性的元素，該屬性值至少包含 `val` 這個子字串。如果 `val` 是空字串，則 selector 不代表任何內容
+- `[att^=val]`：代表具有 `att` 屬性的元素，該屬性值以 `val` 為開頭。如果 `val` 是空字串，則 selector 不會 match 任何內容
+- `[att$=val]`：代表具有 `att` 屬性的元素，該屬性值以 `val` 為結尾。如果 `val` 是空字串，則 selector 不會 match 任何內容
+- `[att*=val]`：代表具有 `att` 屬性的元素，該屬性值至少包含 `val` 這個子字串。如果 `val` 是空字串，則 selector 不會 match 任何內容
 
 直接看範例：
 
@@ -141,6 +171,6 @@ Demo：[Codepen 連結](https://codepen.io/titangene/pen/vYBVKEm)
 今天介紹一些 attribute selector，接下來幾天會接續介紹其他 selector。
 
 資料來源：
-- [CSS 2.2 Specification - Selectors](https://www.w3.org/TR/CSS22/selector.html)
+- [CSS 2.2 - 5. Selectors](https://www.w3.org/TR/CSS22/selector.html)
 - [Selectors Level 3](https://www.w3.org/TR/selectors-3/)
 - [Selectors Level 4](https://www.w3.org/TR/selectors-4/)

@@ -20,6 +20,8 @@ cover_image: /images/cover/css.png
 > 「重新認識 CSS」這個系列名稱的由來就如其名，我想要重新認識它。雖然以前就有學過 CSS，但這次想從 CSS Spec 中學到最原始的定義和內容，更加了解 CSS 的原理，讓我在切版的時候可以更加確定自己在做什麼，我踩到的雷只是因為我不夠了解它才會炸開。
 > 
 > 在這 30 天的內容中，會將 Spec 內看到的資料整理成這個系列，也希望正在學 CSS 的各位可以更加了解它。另外我也會同時將文章發至我的 Blog，如果想直接看文內的程式碼 Demo 畫面，可以到我的 Blog 來看 😃。
+>
+> 本文同步發表於 iT 邦幫忙：[重新認識 CSS - 總結 & 系列目錄](https://ithelp.ithome.com.tw/articles/10228321)
 > 
 > 「重新認識 CSS」系列文章發文於：
 > - [iT 邦幫忙](https://ithelp.ithome.com.tw/users/20117586/ironman/2617)
@@ -39,7 +41,7 @@ cover_image: /images/cover/css.png
 
 簡介 CSS，並說明如何在 HTML 使用 CSS。系列如下：
 
-- [重新認識 CSS - CSS 簡介](https://ithelp.ithome.com.tw/articles/10215907)
+- [重新認識 CSS - CSS 簡介](https://titangene.github.io/article/css-introduction.html)
 
 > 對應 spec 的以下幾篇：
 > - [HTM 4.01 - 14. Style Sheets](https://www.w3.org/TR/html401/present/styles.html)
@@ -49,11 +51,11 @@ cover_image: /images/cover/css.png
 
 Selector 是寫 CSS 時，必須掌握的東西，熟悉 selector 才會選到正確的元素。而此系列是依據 [Selectors Level 3](https://www.w3.org/TR/selectors-3/) 的分類來各別介紹的。系列如下：
 
-- [重新認識 CSS - Simple Selector & Groups of selector](https://ithelp.ithome.com.tw/articles/10216566)
-- [重新認識 CSS - Attribute selector (屬性選擇器)](https://ithelp.ithome.com.tw/articles/10217082)
-- [重新認識 CSS - Pseudo-class (偽類) (1)](https://ithelp.ithome.com.tw/articles/10217730)
-- [重新認識 CSS - Pseudo-class (偽類) (2)](https://ithelp.ithome.com.tw/articles/10218197)
-- [重新認識 CSS - Pseudo-element (偽元素)](https://ithelp.ithome.com.tw/articles/10218712)
+- [重新認識 CSS - Simple Selector & Groups of selector](https://titangene.github.io/article/css-selector-1.html)
+- [重新認識 CSS - Attribute selector (屬性選擇器)](https://titangene.github.io/article/css-attribute-selector.html)
+- [重新認識 CSS - Pseudo-class (偽類) (1)](https://titangene.github.io/article/css-selector-pseudo-class-1.html)
+- [重新認識 CSS - Pseudo-class (偽類) (2)](https://titangene.github.io/article/css-selector-pseudo-class-2.html)
+- [重新認識 CSS - Pseudo-element (偽元素)](https://titangene.github.io/article/css-selector-pseudo-element.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 5. Selectors](https://www.w3.org/TR/CSS22/selector.html)
@@ -66,7 +68,7 @@ Selector 是寫 CSS 時，必須掌握的東西，熟悉 selector 才會選到�
 
 在開始認識 CSS 屬性之前，可以先認識屬性有哪些值和單位可以使用。系列如下：
 
-- [重新認識 CSS - CSS 屬性值](https://ithelp.ithome.com.tw/articles/10219238)
+- [重新認識 CSS - CSS 屬性值](https://titangene.github.io/article/css-attribute-value.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 4.3. Values](https://www.w3.org/TR/CSS22/syndata.html#values)
@@ -77,9 +79,9 @@ Selector 是寫 CSS 時，必須掌握的東西，熟悉 selector 才會選到�
 
 了解在 CSS 中，繼承和權重這些重要的觀念之後，接著就可以更深入的了解 CSS 是如何處理屬性值的。系列如下：
 
-- [重新認識 CSS - Inheritance (繼承)](https://ithelp.ithome.com.tw/articles/10219679)
-- [重新認識 CSS - Cascading & Specificity](https://ithelp.ithome.com.tw/articles/10220677)
-- [重新認識 CSS - CSS 如何處理屬性值](https://ithelp.ithome.com.tw/articles/10220084)
+- [重新認識 CSS - Inheritance (繼承)](https://titangene.github.io/article/css-inheritance.html)
+- [重新認識 CSS - Cascading & Specificity](https://titangene.github.io/article/css-cascading-and-specificity.html)
+- [重新認識 CSS - CSS 如何處理屬性值](https://titangene.github.io/article/css-value-processing.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 6. Assigning property values, Cascading, and Inheritance](https://www.w3.org/TR/CSS22/cascade.html)
@@ -90,9 +92,9 @@ Selector 是寫 CSS 時，必須掌握的東西，熟悉 selector 才會選到�
 
 引入其他 CSS 檔案或在多個裝置、解析度、螢幕尺寸下要應用哪個 style sheet (樣式表)，就需要了解如何使用 `@media` 和 `@import`。系列如下：
 
-- [重新認識 CSS - Media type](https://ithelp.ithome.com.tw/articles/10221152)
-- [重新認識 CSS - Media query](https://ithelp.ithome.com.tw/articles/10221641)
-- [重新認識 CSS - @import](https://ithelp.ithome.com.tw/articles/10221956)
+- [重新認識 CSS - Media type](https://titangene.github.io/article/css-media-type.html)
+- [重新認識 CSS - Media query](https://titangene.github.io/article/css-media-query.html)
+- [重新認識 CSS - @import](https://titangene.github.io/article/css-import.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 7. Media types](https://www.w3.org/TR/CSS22/media.html)
@@ -104,10 +106,10 @@ Selector 是寫 CSS 時，必須掌握的東西，熟悉 selector 才會選到�
 
 Box model 是用來描述 document tree 中的每個元素所產生的矩形框。系列如下：
 
-- [重新認識 CSS - Box model (前傳)](https://ithelp.ithome.com.tw/articles/10222331)
-- [重新認識 CSS - Box model：border](https://ithelp.ithome.com.tw/articles/10223019)
-- [重新認識 CSS - box-sizing](https://ithelp.ithome.com.tw/articles/10223434)
-- [重新認識 CSS - Collapsing margins](https://ithelp.ithome.com.tw/articles/10223906)
+- [重新認識 CSS - Box model (前傳)](https://titangene.github.io/article/css-box-model.html)
+- [重新認識 CSS - Box model：border](https://titangene.github.io/article/css-border.html)
+- [重新認識 CSS - box-sizing](https://titangene.github.io/article/css-box-sizing.html)
+- [重新認識 CSS - Collapsing margins](https://titangene.github.io/article/css-collapsing-margins.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 8. Box model](https://www.w3.org/TR/CSS22/box.html)
@@ -119,7 +121,7 @@ Box model 是用來描述 document tree 中的每個元素所產生的矩形框�
 
 Visual formatting model 是用來描述 UA 會如何處理視覺媒體 (visual media) 的 document tree，document tree 中的每個元素都會根據 box model 來產生 0 個或多個 box。而這些 box 的位置和大小都是相對於稱為 containing block 的矩形框的邊緣計算的。系列如下：
 
-- [重新認識 CSS - Containing block](https://ithelp.ithome.com.tw/articles/10224274)
+- [重新認識 CSS - Containing block](https://titangene.github.io/article/css-containing-block.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 9.1.2. Containing blocks](https://www.w3.org/TR/CSS22/visuren.html#containing-block)
@@ -129,9 +131,9 @@ Visual formatting model 是用來描述 UA 會如何處理視覺媒體 (visual m
 
 元素產生的 box 的 type，可以使用 `display` 屬性來指定，而 box 的 type 會影響 box 在 visual formatting model 中的行為。系列如下：
 
-- [重新認識 CSS - Visual formatting model：Box generation (block)](https://ithelp.ithome.com.tw/articles/10224653)
-- [重新認識 CSS - Visual formatting model：Box generation (inline)](https://ithelp.ithome.com.tw/articles/10225035)
-- [重新認識 CSS - display](https://ithelp.ithome.com.tw/articles/10225430)
+- [重新認識 CSS - Visual formatting model：Box generation (block)](https://titangene.github.io/article/css-box-generation-block-box.html)
+- [重新認識 CSS - Visual formatting model：Box generation (inline)](https://titangene.github.io/article/css-box-generation-inline-box.html)
+- [重新認識 CSS - display](https://titangene.github.io/article/css-display.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 9.2. Controlling box generation](https://www.w3.org/TR/CSS22/visuren.html#box-gen)
@@ -141,9 +143,9 @@ Visual formatting model 是用來描述 UA 會如何處理視覺媒體 (visual m
 
 Normal flow 中的 box 屬於某種 formatting context，可是 block 或 inline，不同的 box 會參與不同的 formatting context。block-level box 會參與 BFC，inline-level box 會參與 IFC。系列如下：
 
-- [重新認識 CSS - formatting context & independent formatting context](https://ithelp.ithome.com.tw/articles/10226493)
-- [重新認識 CSS - Block formatting context (BFC)](https://ithelp.ithome.com.tw/articles/10226848)
-- [重新認識 CSS - Inline formatting context (IFC)](https://ithelp.ithome.com.tw/articles/10227194)
+- [重新認識 CSS - formatting context & independent formatting context](https://titangene.github.io/article/css-formatting-context.html)
+- [重新認識 CSS - Block formatting context (BFC)](https://titangene.github.io/article/css-bfc.html)
+- [重新認識 CSS - Inline formatting context (IFC)](https://titangene.github.io/article/css-ifc.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 9.4.1. Block formatting contexts](https://www.w3.org/TR/CSS22/visuren.html#block-formatting)
@@ -155,8 +157,8 @@ Normal flow 中的 box 屬於某種 formatting context，可是 block 或 inline
 
 在 CSS 2.2 中，`position` 和 `float` 屬性這些定位方案都可以對 box 進行佈局。系列如下：
 
-- [重新認識 CSS - position](https://ithelp.ithome.com.tw/articles/10225808)
-- [重新認識 CSS - float](https://ithelp.ithome.com.tw/articles/10226157)
+- [重新認識 CSS - position](https://titangene.github.io/article/css-position.html)
+- [重新認識 CSS - float](https://titangene.github.io/article/css-float.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 9.3. Positioning schemes](https://www.w3.org/TR/CSS22/visuren.html#positioning-scheme)
@@ -166,7 +168,7 @@ Normal flow 中的 box 屬於某種 formatting context，可是 block 或 inline
 
 除了水平和垂直的位置之外，如果想讓 box 可以有類似圖層的概念來排版，就能使用 `z-index` 屬性，這些 box 可以沿著 z 軸來排列，讓一個 box 可以疊在另一個 box 的上面。系列如下：
 
-- [重新認識 CSS - z-index & stacking context](https://ithelp.ithome.com.tw/articles/10228026)
+- [重新認識 CSS - z-index & stacking context](https://titangene.github.io/article/css-z-index-and-stacking-context.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 9.9. Layered presentation](https://www.w3.org/TR/CSS22/visuren.html#layers)
@@ -175,10 +177,9 @@ Normal flow 中的 box 屬於某種 formatting context，可是 block 或 inline
 
 當 block box 的內容超出 box 的 content edge 時，就可能會發生 overflow。使用 `overflow` 屬性就能指定超出的部份要如何處理 (例如：提供捲動機制來訪問被剪裁的內容)。而 `visibility` 屬性則可以指定是否要 render 由元素產生的 box，可用來顯示或隱藏 box。系列如下：
 
-- [重新認識 CSS - overflow](https://ithelp.ithome.com.tw/articles/10227474)
-- [重新認識 CSS - visibility](https://ithelp.ithome.com.tw/articles/10227785)
+- [重新認識 CSS - overflow](https://titangene.github.io/article/css-overflow.html)
+- [重新認識 CSS - visibility](https://titangene.github.io/article/css-visibility.html)
 
 > 對應 spec 的以下幾篇：
 > - [CSS 2.2 - 11. Visual effects](https://www.w3.org/TR/CSS22/visufx.html)
 > - [CSS 2.2 - 17.5.5. Dynamic row and column effects](https://www.w3.org/TR/CSS22/tables.html#dynamic-effects)
-

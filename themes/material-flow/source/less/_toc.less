@@ -1,12 +1,13 @@
 .toc-wrapper{
   position:fixed;
-  top: @header-height + @gap;
+  bottom: @gap;
   right: 50%;
   margin-right: -@container-width/2;
   transition: all .24s ease-out;
   // prevent toc is too heigh.
   overflow: auto;
   max-height: ~"calc(100% - @{header-height} - 2 * @{gap})";
+  font-size: 15px;
   @media(max-width: @container-width){
     right: 0;
     margin-right:0;
@@ -27,7 +28,9 @@
   border-left: 3px solid @accent-color;
   background: @white;
   a {
-    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     &:hover,&:active,&.active{
       color: @accent-color;
     }

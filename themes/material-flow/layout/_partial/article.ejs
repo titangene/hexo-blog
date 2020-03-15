@@ -3,7 +3,10 @@
   itemscope itemprop="blogPost">
   <%- partial('post/meta', { post: post }) %>
   <% if (post.toc !== false) { %>
-    <section class="toc-wrapper"><%- toc(post.content, { list_number: false }) %></section>
+    <section class="toc-wrapper">
+      <h3>目錄</h3>
+      <%- toc(post.content, { list_number: false }) %>
+    </section>
   <% } %>
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">

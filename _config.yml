@@ -192,31 +192,37 @@ feed:
 
 # hexo-all-minifier
 html_minifier:
-  enable: false
+  enable: true
   ignore_error: false
+  silent: true
   exclude:
 
 css_minifier:
-  enable: false
+  enable: true
+  silent: true
   exclude:
   - '*.min.css'
 
 js_minifier:
-  enable: false
+  enable: true
   mangle: true
+  silent: true
+  output:
+  compress:
   exclude:
   - '*.min.js'
 
 js_concator:
-  enable: false
+  enable: true
   bundle_path: '/js/bundle.js'
   front: false
-  silent: false
+  silent: true
 
 image_minifier:
   enable: false
-  interlaced: true
-  multipass: true
-  optimizationLevel: 4
-  pngquant: true
-  progressive: true
+  # interlaced: false
+  # multipass: false
+  # optimizationLevel: 2
+  # pngquant: true
+  # progressive: false
+  # silent: true

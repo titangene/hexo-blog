@@ -6,19 +6,3 @@ google_analytics:
 facebook_sdk:
   app_id: 2470546159839111
   fb_admin: 100001106016019
-
-## hexo-all-minifier
-html_minifier:
-  enable: true
-
-css_minifier:
-  enable: true
-
-js_minifier:
-  enable: true
-
-js_concator:
-  # enable: true
-
-image_minifier:
-  enable: true

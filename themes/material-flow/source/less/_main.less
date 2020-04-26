@@ -4,10 +4,10 @@
   float: left;
 
   .post-list {
-    position: relative;
+    // position: relative;
     margin: 0px auto;
-    columns: 400px;
-    column-gap: 0;
+    // columns: 400px;
+    // column-gap: 0;
     margin: -@gap /2;
 
     @media(max-width: @on-phone) {
@@ -40,8 +40,13 @@
 
   .post-wrapper {
     // for firefox
-    column-break-inside: avoid;
-    break-inside: avoid-column;
+    // column-break-inside: avoid;
+    // break-inside: avoid-column;
+    width: 100%;
+
+    @media(min-width: @on-laptop) {
+      width: 50%;
+    }
   }
 
   .mobile-post() {
@@ -57,11 +62,16 @@
       }
 
       .full-width {
-        margin-left: -1.5 * @gap;
-        margin-right: -1.5 * @gap;
+        margin-left: -1 * @gap;
+        margin-right: -1 * @gap;
         padding-left: @gap;
         padding-right: @gap;
-        width:~"calc(100% + 3* @{gap})"
+        // width:~"calc(100% + 3* @{gap})"
+
+        @media(min-width: @on-phone-L) {
+          margin-left: -1.5 * @gap;
+          margin-right: -1.5 * @gap;
+        }
       }
 
       .auto-padding {
@@ -88,7 +98,7 @@
       margin-bottom: -1.5*@gap;
     }
 
-    @media(max-width:@on-phone) {
+    @media(max-width: @modal-threshold) {
       padding-left: 0;
       padding-right: 0;
     }

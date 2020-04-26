@@ -1,1 +1,5 @@
 render_drafts: true
+
+server:
+  log: true
+  compress: true

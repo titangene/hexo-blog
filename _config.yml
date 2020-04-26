@@ -213,7 +213,7 @@ js_minifier:
   - '*.min.js'
 
 js_concator:
-  enable: true
+  enable: false
   bundle_path: '/js/bundle.js'
   front: false
   silent: true

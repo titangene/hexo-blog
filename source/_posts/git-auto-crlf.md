@@ -9,6 +9,8 @@ categories:
 cover_image: /images/cover/git.jpg
 ---
 
+![](../images/cover/git.jpg)
+
 在使用 Git 的過程中，若在不同作業系統編輯同一個 repo 的檔案，可能就會發生斷行字元的問題。Git 在 config 提供了 `core.autocrlf` 選項並用 `.gitAttributes` 檔案來處理斷行字元的問題。
 
 <!-- more -->

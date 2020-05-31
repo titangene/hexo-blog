@@ -7,8 +7,9 @@ tags:
   - JavaScript
   - Node.js
   - CLI
+  - w3HexSchool
 categories:
-  - 開發工具
+  - Web Dev
 cover_image: /images/cover/node.jpg
 ---
 

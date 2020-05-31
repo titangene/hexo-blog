@@ -1,12 +1,12 @@
 <article class="post<%= (post.title) ? "" : "no-title" %>">
   <%- partial('post/meta', { post: post }) %>
   <section class="article typo">
-    <div itemprop="description">
+    <div class="description" itemprop="description">
       <% if (!/<img src=.*/i.test(post.excerpt) && post.cover_image != null) { %>
-        <p><img src="<%= post.cover_image %>" alt="<%= post.title %>"></p>
+        <img src="<%= post.cover_image %>" alt="<%= post.title %>">
       <% } %>
       <%- post.excerpt.replace(/..\/images/, '\/images') || post.content %>
-    <div>
+    </div>
 
     <% if (post.excerpt) { %>
     <div class="readmore">

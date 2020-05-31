@@ -9,8 +9,9 @@ tags:
   - CLI
   - npm
   - Yarn
+  - w3HexSchool
 categories:
-  - 開發工具
+  - Web Dev
 cover_image: /images/cover/npm_yarn.jpg
 ---
 

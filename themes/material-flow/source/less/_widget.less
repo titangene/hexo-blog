@@ -90,7 +90,9 @@
   //     display:none;
   // }
   .header {
+    font-size: 24px;
     text-align: center;
+    padding: 14px 20px;
   }
 
   .content {
@@ -98,11 +100,12 @@
 
     .desc {
       position: relative;
-      padding: 10px @gap;
+      padding: 14px @gap;
       background: @qoute-background-color;
       .enable-trans(.15s);
       line-height: 1.2em;
       font-style: italic;
+      font-size: 18px;
 
       &:before {
         content: '';
@@ -126,7 +129,16 @@
     padding: @gap/2 8px;
 
     .social {
-      padding: @gap/2;
+      width: 42px;
+      display: inline-block;
+      padding: 6px 10px;
+      font-size: 24px;
+      vertical-align: middle;
+      text-align: center;
+
+      & + .social {
+        margin-left: 6px;
+      }
     }
   }
 }

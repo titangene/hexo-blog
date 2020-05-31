@@ -83,3 +83,14 @@ less:
 # See: https://support.google.com/webmasters/answer/139066
 # Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
 canonical: true
+
+# comment
+gitalk:
+  enable: post
+  on: true
+  owner: titangene
+  repo: hexo-blog
+  admin: ['titangene']
+  labels: ['gitalk']
+  clientID: 'dd1684f31ee17e25c22b'
+  clientSecret: '4b51bb4a5996b04d58821a6e3da8558f23da4cdf'

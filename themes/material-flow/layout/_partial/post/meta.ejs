@@ -7,6 +7,13 @@
     </h2>
   <% } %>
   <%- partial('post-time', { post: post }) %>
-  <%- partial('disqus-comments-count', { post: post }) %>
+  <span class="comments-count">
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fas fa-comment"></i>
+    </span>
+    <a href="<%- post.permalink %>#comments"
+      class="article-comment-count">留言</a>
+  </span>
   <%- partial('categories', { post: post }) %>
 </section>

@@ -149,12 +149,6 @@ deploy:
   repo: git@github.com:titangene/titangene.github.io.git
   branch: master
 
-# Comments
-disqus:
-  enable: true
-  shortname: titangene-blog # your_disqus_short_name
-  count: true
-
 # Facebook SDK Support.
 facebook_sdk:
   enable: true

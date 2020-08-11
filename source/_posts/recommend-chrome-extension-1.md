@@ -14,7 +14,7 @@ cover_image: /images/cover/chrome-extension.jpg
 
 ![](../images/cover/chrome-extension.jpg)
 
-本篇推薦一些我常用的 Chrome Extension，包含複製分頁的 Markdown 格式的連結、將頁面變為按主題。
+本篇推薦一些我常用的 Chrome Extension，包含複製分頁的 Markdown 格式的連結、將頁面變為暗主題。
 
 <!-- more -->
 

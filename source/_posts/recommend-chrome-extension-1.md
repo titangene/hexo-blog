@@ -7,6 +7,7 @@ tags:
   - Chrome Extension
   - Markdown
   - Theme
+  - w3HexSchool
 categories:
   - Tools
 cover_image: /images/cover/chrome-extension.jpg

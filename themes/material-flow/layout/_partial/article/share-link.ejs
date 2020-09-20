@@ -1,5 +1,6 @@
 <% if (theme.sns_share.enable) { %>
   <%
+    var facebookSDKAppID = config.facebook_sdk.app_id;
     var encodedUrl = encodeURIComponent(post.permalink);
     var postTags = [];
     if (post.tags && post.tags.length) {
@@ -14,25 +15,23 @@
   <div class="article-share-links">
     <span>分享：</span>
     <% if (theme.sns_share.facebook) { %>
-      <a class="fab fa-facebook-f" title="Facebook" target="_blank" href="javascript:window.open('https://www.facebook.com/sharer.php?u=<%= encodedUrl %>', 'Share on Facebook','width=600, height=600')"></a>
+      <a class="fab fa-facebook-f" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=<%= encodedUrl %>"></a>
     <% } %>
     <% if (theme.sns_share.twitter) { %>
-      <a class="fab fa-twitter" title="Twitter" target="_blank" href="javascript:window.open('https://twitter.com/share?url=<%= encodedUrl %>&amp;text=<%= post.title %>&amp;hashtags=<%= postTags %>&amp;via=titangene_blog', 'Share on Twitter','width=600, height=260')"></a>
+      <a class="fab fa-twitter" title="Twitter" target="_blank" href="https://twitter.com/share?url=<%= encodedUrl %>&amp;text=<%= post.title %>&amp;hashtags=<%= postTags %>&amp;via=titangene_blog"></a>
+
     <% } %>
     <% if (theme.sns_share.linkedin) { %>
-      <a class="fab fa-linkedin-in" title="Linkedin" target="_blank" href="javascript:window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=<%= encodedUrl %>&amp;title=<%= post.title %>', 'Share on Linkedin','width=600, height=600')"></a>
+      <a class="fab fa-linkedin-in" title="Linkedin" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=<%= encodedUrl %>"></a>
     <% } %>
     <% if (theme.sns_share.messenger) { %>
-      <a class="fab fa-facebook-messenger" title="Facebook Messenger" target="_blank" href="javascript:window.open('http://www.facebook.com/dialog/send?app_id=2470546159839111&amp;link=<%= encodedUrl %>&amp;display=popup&amp;redirect_uri=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Freturn%2Fclose%23_%3D_', 'Send in Messenger','width=600, height=600')"></a>
-    <% } %>
+      <a class="fab fa-facebook-messenger" title="Facebook Messenger" target="_blank" href="http://www.facebook.com/dialog/send?app_id=<%= facebookSDKAppID %>&amp;link=<%= encodedUrl %>&amp;display=popup&amp;redirect_uri=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Freturn%2Fclose%23_%3D_"></a>
+      <% } %>
     <% if(theme.sns_share.telegram) { %>
       <a class="fab fa-telegram-plane" href="https://telegram.me/share/url?url=<%- encodedUrl %>&text=<%= post.title %>" target="_blank"></a>
     <% } %>
-    <% if (theme.sns_share.googleplus) { %>
-      <a class="fab fa-google-plus-g" title="Google" target="_blank" href="javascript:window.open('https://plus.google.com/share?url=<%= encodedUrl %>', 'Share on Google Plus','width=400, height=600')"></a>
-    <% } %>
     <% if (theme.sns_share.pinterest) { %>
-      <a class="fab fa-pinterest-p" title="Pinterest" target="_blank" href="javascript:window.open('http://pinterest.com/pin/create/button/?url=<%= encodedUrl %>', 'Share on Pinterest','width=600, height=600')"></a>
+      <a class="fab fa-pinterest-p" title="Pinterest" target="_blank" href="http://pinterest.com/pin/create/button/?url=<%= encodedUrl %>"></a>
     <% } %>
     <% if (theme.sns_share.mail) { %>
       <a class="fas fa-envelope" title="Mail" href="mailto:?Subject=<%= post.title %>&amp;body=<%= post.title %> : <%= encodedUrl %>"></a>

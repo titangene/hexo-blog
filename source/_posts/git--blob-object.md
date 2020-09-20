@@ -216,10 +216,10 @@ Git 物件都是使用 [zlib](https://www.zlib.net/) 壓縮，物件名稱的 SH
 
 前面的 `<type> <content_length>\0` 代表 header，而 `<content>` 代表檔案內容。下面舉個例子：
 
-建立名為 `hello.txt` 的檔案，檔案內容為 `hi`：
+建立名為 `hello.txt` 的檔案，檔案內容為 `hello`：
 
 ```shell
-$ echo "hi" >  hello.txt
+$ echo "hello" > hello.txt
 ```
 
 使用 `cat` 指令並加上 `-A` 選項察看檔案內容：
@@ -229,8 +229,8 @@ $ echo "hi" >  hello.txt
 - `-v`：除了換行及 TAB 字元外，使用 `^` 及 `M-` 表示法顯示字元 (列出一些看不出來的特殊字元)
 
 ```shell
-$ cat -A hello      
-hi%
+$ cat -A hello.txt
+hello%
 ```
 
 檔案內容的結尾 `%` 代表 LF (line Feed，`\n` )，我是在 Linux 建立 `hello.txt` 此檔案的，而 Linux 的換行字元是使用 LF 字元，所以在每一行的結尾才會多了 LF 這個字元。
@@ -298,7 +298,7 @@ Checking object directories: 100% (256/256), done.
 
 ```shell
 $ vim .git/objects/ce/013625030ba8dba906f756967f9e9ca394464a
-$ git fsck                                                  
+$ git fsck
 error: inflate: data stream error (incorrect header check)
 error: unable to unpack header of .git/objects/ce/013625030ba8dba906f756967f9e9ca394464a
 error: ce013625030ba8dba906f756967f9e9ca394464a: object corrupt or missing: .git/objects/ce/013625030ba8dba906f756967f9e9ca394464a

@@ -5,6 +5,7 @@ author: Titangene
 tags:
   - IT 鐵人賽
   - ECMAScript
+  - w3HexSchool
 categories:
   - JavaScript
 cover_image: /images/cover/javascript.jpg
@@ -12,7 +13,7 @@ cover_image: /images/cover/javascript.jpg
 
 ![](../images/cover/javascript.jpg)
 
-有時要將 JS 物件轉成其他資料結構，所以需要迭代物件中的所有 property，過去會用 `for-in` 陳述句，但只想列舉 own property，就必須用 `hasOwnProperty()` 才能解決。後來 ES5 新增的 `Object.keys()` 解決了非 own property 的問題，但還是要手動透過 property name 來存取 value，不方便！終於在 ES7 新增了 `Object.values()` 和 `Object.entries()`，可以直接取得 property value 了！
+有時要將 JS 物件轉成其他資料結構，所以需要迭代物件中的所有 property，過去會用 `for-in` 陳述句，但只想列舉 own property，就必須用 `hasOwnProperty()` 才能解決。後來 ES5 新增的 `Object.keys()` 解決了非 own property 的問題，但還是要手動透過 property name 來存取 value，不方便！終於在 ES2017 (ES8) 新增了 `Object.values()` 和 `Object.entries()`，可以直接取得 property value 了！
 
 本篇來介紹 `Object.values()`、`Object.keys()` 和 `Object.entries()`，以及在 ECMAScript spec 是如何定義的。
 
@@ -154,7 +155,7 @@ console.log(propertyCount);  // 3
 
 # 現代的 `Object.values()` 和 `Object.entries()`
 
-後來在 ES7 新增了 `Object.values()` 和 `Object.entries()`，終於可以取得 property value 了！以前的 `for-in` 陳述句和 `Object.keys()` 都還要自己透過原物件的 property name 來存取 property value。
+後來在 ES2017 (ES8) 新增了 `Object.values()` 和 `Object.entries()`，終於可以取得 property value 了！以前的 `for-in` 陳述句和 `Object.keys()` 都還要自己透過原物件的 property name 來存取 property value。
 
 `Object.values()` 是直接取得所有 property value，並以陣列回傳。看一個簡單的範例：
 

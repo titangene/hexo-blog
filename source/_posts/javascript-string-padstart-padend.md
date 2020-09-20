@@ -58,6 +58,10 @@ console.log(padStart('18', 4, '0'));  // 0018
 
 或者從 Stack Overflow 找到不錯的解法參考一下~~直接複製貼上~~？上面的範例都是我從 [Stack Overflow](https://stackoverflow.com/questions/2686855/is-there-a-javascript-function-that-can-pad-a-string-to-get-to-a-determined-leng) 參考的 XD。
 
+> 補充一個與 `padStart()` 有關的 npm 套件：[`left-pad`](https://www.npmjs.com/package/left-pad)，當年發生了一些故事，詳情可參閱：
+> - [他一怒之下刪除 11 行程式碼 網際網路遭殃 - The News Lens 關鍵評論網](https://www.thenewslens.com/article/39189)
+> - [The npm Blog — kik, left-pad, and npm](https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm)
+
 # 現代的 `padStart` 和 `padEnd`
 
 在 ES2017 (ES8) 新增了 `String.prototype.padStart()` 和 `String.prototype.padEnd()`，終於不用自己處理常見的字串處理需求了！

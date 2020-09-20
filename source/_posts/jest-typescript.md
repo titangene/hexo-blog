@@ -19,6 +19,8 @@ TypeScript 是 JavaScript 的 typed superset，提供強大的型別檢查系統
 
 <!-- more -->
 
+> 其他 Jest 相關文章可參閱 [Jest 系列文章](https://titangene.github.io/tags/jest/)。
+
 下面來介紹如何建置 Jest + TypeScript 的測試開發環境。
 
 # 建立開發環境

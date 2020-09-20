@@ -5,6 +5,7 @@ author: Titangene
 tags:
   - Jest
   - JavaScript
+  - Node.js
   - Babel
   - Unit Testing
   - w3HexSchool
@@ -18,6 +19,8 @@ cover_image: /images/cover/jest.jpg
 最近在學習單元測試，而 Jest 是在前端蠻常見的測試框架，可透過建立測試來確保自己寫的程式碼是否符合需求，而且當改動程式碼時，才能確保是否因不小心而產生的 bug，測試能讓我更有信心的去重構程式碼。
 
 <!-- more -->
+
+> 其他 Jest 相關文章可參閱 [Jest 系列文章](https://titangene.github.io/tags/jest/)。
 
 那 Jest 可以用在哪些專案？你可為下面這些專案建立測試：
 - [Babel](https://babeljs.io/)

@@ -12,7 +12,7 @@ cover_image: /images/cover/javascript.jpg
 
 ![](../images/cover/javascript.jpg)
 
-你很常聽到 ES6、ES7 等這些名稱嗎？有聽過 ECMA 和 TC39 嗎？ECMAScript 和 JavaScript 又是什麼？規範要去哪裡看？下面會各別介紹。
+你很常聽到 ES6、ES7、ES2017 等這些名稱嗎？有聽過 ECMA 和 TC39 嗎？ECMAScript 和 JavaScript 又是什麼？規範要去哪裡看？下面會各別介紹。
 
 <!-- more -->
 
@@ -58,9 +58,9 @@ JavaScript 和 ECMAScript 都是程式語言，但不是一樣的東西。JavaSc
 
 ECMA-262 是 ECMAScript 的規範，而 JavaScript 只是其中一種實作和擴充的程式語言 (雖然 JavaScript 相容於 ECMAScript，但 JavaScript 還提供 ECMAScript 未定義的特性)。
 
-而我們常聽到的 ES6，代表的是 ECMA-262 第 6 版 (ECMA-262 6th Edition)。 
+而我們常聽到的 ES6，代表的是 ECMA-262 第 6 版 (ECMA-262 6th Edition)。
 
-從 ES7 開始，ECMAScript 會在每年釋出新版本，裡面包含已完成的新特性，而瀏覽器就會根據新特性來完成實作，開發者就能開始使用這些新特性。
+從 ES7 (ES2016) 開始，ECMAScript 會在每年釋出新版本，裡面包含已完成的新特性，而瀏覽器就會根據新特性來完成實作，開發者就能開始使用這些新特性。
 
 
 # TC39
@@ -105,6 +105,7 @@ Ecma TC39 委員會負責發展 ECMAScript 程式語言並撰寫 spec，要對 s
 若要看 ECMAScript spec 主要有兩個地方：
 - 最新版、最準確的 spec，包含最新年度 snapshot 的內容以及所有已完成的提案 (即 stage 4 的提案)：http://www.ecma-international.org/ecma-262/
 - 過去發佈的 spec 版本：[Standard ECMA-262-archive](http://www.ecma-international.org/publications/standards/Ecma-262-arch.htm)，例如：
+  - [ECMAScript Language Specification - ECMA-262 Edition 5.1](http://www.ecma-international.org/ecma-262/5.1)
   - [ECMAScript 2015 Language Specification - ECMA-262 6th Edition](http://www.ecma-international.org/ecma-262/6.0)
   - [ECMAScript 2016 Language Specification - ECMA-262 7th Edition](http://www.ecma-international.org/ecma-262/7.0)
   - [ECMAScript 2017 Language Specification - ECMA-262 8th Edition](http://www.ecma-international.org/ecma-262/8.0)

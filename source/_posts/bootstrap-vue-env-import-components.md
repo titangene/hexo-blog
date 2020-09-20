@@ -5,6 +5,7 @@ author: Titangene
 tags:
   - Vue.js
   - Bootstrap
+  - w3HexSchool
 categories:
   - web-dev
 cover_image: /images/cover/bootstrap-vue.jpg

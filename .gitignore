@@ -4,6 +4,7 @@ node_modules/
 public/
 .deploy*/
 .vscode
+.idea
 
 _multiconfig.yml
 source/images/logo

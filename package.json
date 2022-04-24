@@ -42,5 +42,9 @@
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0",
     "markdown-it-task-checkbox": "^1.0.6"
+  },
+  "volta": {
+    "node": "12.22.12",
+    "yarn": "1.22.18"
   }
 }
